@@ -21,6 +21,12 @@
 		4D417DF0208D5B4E00B4E3FA /* cs_mentoring.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D417DEE208D5B4E00B4E3FA /* cs_mentoring.xcdatamodeld */; };
 		4D417DF2208D5B4E00B4E3FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D417DF1208D5B4E00B4E3FA /* Assets.xcassets */; };
 		4D417DF5208D5B4E00B4E3FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D417DF3208D5B4E00B4E3FA /* LaunchScreen.storyboard */; };
+		4D4B62BF2093B8DC00A674B5 /* SpaceMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D4B62BA2093B8DC00A674B5 /* SpaceMono-Regular.ttf */; };
+		4D4B62C02093B8DC00A674B5 /* SpaceMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D4B62BB2093B8DC00A674B5 /* SpaceMono-Bold.ttf */; };
+		4D4B62C12093B8DC00A674B5 /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4D4B62BC2093B8DC00A674B5 /* OFL.txt */; };
+		4D4B62C22093B8DC00A674B5 /* Karla-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D4B62BD2093B8DC00A674B5 /* Karla-Regular.ttf */; };
+		4D4B62C32093B8DC00A674B5 /* Karla-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4D4B62BE2093B8DC00A674B5 /* Karla-Bold.ttf */; };
+		4D4B62C42093BCDE00A674B5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D417DF6208D5B4E00B4E3FA /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +46,11 @@
 		4D417DF1208D5B4E00B4E3FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D417DF4208D5B4E00B4E3FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D417DF6208D5B4E00B4E3FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D4B62BA2093B8DC00A674B5 /* SpaceMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceMono-Regular.ttf"; sourceTree = "<group>"; };
+		4D4B62BB2093B8DC00A674B5 /* SpaceMono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceMono-Bold.ttf"; sourceTree = "<group>"; };
+		4D4B62BC2093B8DC00A674B5 /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
+		4D4B62BD2093B8DC00A674B5 /* Karla-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Regular.ttf"; sourceTree = "<group>"; };
+		4D4B62BE2093B8DC00A674B5 /* Karla-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +98,22 @@
 				0A5EE4FE2091951F00A4C214 /* MentorProfileViewController.xib */,
 				0A5EE5012091956F00A4C214 /* AdminProfileViewController.swift */,
 				0A5EE5022091956F00A4C214 /* AdminProfileViewController.xib */,
+				4D4B62B92093B8DC00A674B5 /* Fonts */,
 			);
 			path = "cs-mentoring";
+			sourceTree = "<group>";
+		};
+		4D4B62B92093B8DC00A674B5 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4D4B62BA2093B8DC00A674B5 /* SpaceMono-Regular.ttf */,
+				4D4B62BB2093B8DC00A674B5 /* SpaceMono-Bold.ttf */,
+				4D4B62BC2093B8DC00A674B5 /* OFL.txt */,
+				4D4B62BD2093B8DC00A674B5 /* Karla-Regular.ttf */,
+				4D4B62BE2093B8DC00A674B5 /* Karla-Bold.ttf */,
+			);
+			name = Fonts;
+			path = ../../Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +176,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A5EE5002091951F00A4C214 /* MentorProfileViewController.xib in Resources */,
+				4D4B62C02093B8DC00A674B5 /* SpaceMono-Bold.ttf in Resources */,
 				0A5EE4FC2091950E00A4C214 /* StudentProfileViewController.xib in Resources */,
+				4D4B62C32093B8DC00A674B5 /* Karla-Bold.ttf in Resources */,
+				4D4B62C12093B8DC00A674B5 /* OFL.txt in Resources */,
+				4D4B62BF2093B8DC00A674B5 /* SpaceMono-Regular.ttf in Resources */,
 				0A5EE5042091956F00A4C214 /* AdminProfileViewController.xib in Resources */,
 				4D417DF5208D5B4E00B4E3FA /* LaunchScreen.storyboard in Resources */,
+				4D4B62C42093BCDE00A674B5 /* Info.plist in Resources */,
+				4D4B62C22093B8DC00A674B5 /* Karla-Regular.ttf in Resources */,
 				4D417DF2208D5B4E00B4E3FA /* Assets.xcassets in Resources */,
 				4D417DED208D5B4E00B4E3FA /* Main.storyboard in Resources */,
 			);

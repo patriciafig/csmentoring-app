@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wRt-rs-X8z">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wRt-rs-X8z">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SpaceMono-Regular.ttf">
+            <string>SpaceMono-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -23,18 +28,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Ons-jz-eG1">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="sDM-vF-100">
-                                <rect key="frame" x="75" y="98" width="170" height="204"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="sDM-vF-100" secondAttribute="height" multiplier="1:1.2" id="T8c-yV-qPz"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="computer science mentoring" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzu-zp-NUU">
-                                <rect key="frame" x="33" y="362" width="254" height="25.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b0E-lb-tEO">
                                 <rect key="frame" x="50" y="478" width="97.5" height="40"/>
                                 <color key="backgroundColor" red="0.40784313725490196" green="0.32549019607843138" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -61,6 +54,17 @@
                                     <segue destination="yRP-yl-YAD" kind="push" id="a4D-H7-Ucl"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="nEI-M9-s5a">
+                                <rect key="frame" x="40" y="153" width="240" height="180"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="computer science mentoring" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nzu-zp-NUU">
+                                <rect key="frame" x="16" y="370" width="288" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="SpaceMono-Regular" family="Space Mono" pointSize="17"/>
+                                <color key="textColor" red="0.49803921568627452" green="0.49803921568627452" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -68,18 +72,12 @@
                             <constraint firstAttribute="top" secondItem="Ons-jz-eG1" secondAttribute="top" id="2zs-jE-Irm"/>
                             <constraint firstItem="DWt-nP-bmw" firstAttribute="centerY" secondItem="b0E-lb-tEO" secondAttribute="centerY" id="50O-aH-78E"/>
                             <constraint firstAttribute="bottom" secondItem="Ons-jz-eG1" secondAttribute="bottom" id="CO9-i3-Tba"/>
-                            <constraint firstItem="nzu-zp-NUU" firstAttribute="centerX" secondItem="sDM-vF-100" secondAttribute="centerX" id="D6X-Y7-Iu6"/>
                             <constraint firstItem="DWt-nP-bmw" firstAttribute="leading" secondItem="b0E-lb-tEO" secondAttribute="trailing" constant="25" id="K9W-Me-89M"/>
                             <constraint firstItem="DWt-nP-bmw" firstAttribute="width" secondItem="b0E-lb-tEO" secondAttribute="width" id="LHG-Ra-GbX"/>
                             <constraint firstItem="DWt-nP-bmw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-50" id="Nty-vd-oIb"/>
-                            <constraint firstItem="sDM-vF-100" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="OcF-in-BaT"/>
-                            <constraint firstItem="sDM-vF-100" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="34" id="Qdw-xa-MPe"/>
                             <constraint firstItem="Ons-jz-eG1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WtY-F5-ksX"/>
                             <constraint firstItem="b0E-lb-tEO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="cDu-IP-gXx"/>
                             <constraint firstAttribute="trailing" secondItem="Ons-jz-eG1" secondAttribute="trailing" id="lwZ-Ta-62u"/>
-                            <constraint firstItem="sDM-vF-100" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="q7o-GV-g4S"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sDM-vF-100" secondAttribute="trailing" constant="75" id="sxl-x3-t3H"/>
-                            <constraint firstItem="nzu-zp-NUU" firstAttribute="top" secondItem="sDM-vF-100" secondAttribute="bottom" constant="60" id="vil-ha-Mse"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -87,7 +85,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="975.20000000000005" y="33.251231527093594"/>
+            <point key="canvasLocation" x="975" y="32.74647887323944"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="avl-4L-PgL">
