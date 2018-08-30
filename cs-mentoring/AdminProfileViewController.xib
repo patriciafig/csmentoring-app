@@ -20,12 +20,18 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Admin Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUF-9v-dnU">
-                    <rect key="frame" x="99" y="82" width="177" height="37"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Admin Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUF-9v-dnU">
+                    <rect key="frame" x="99" y="188" width="177" height="37"/>
                     <fontDescription key="fontDescription" type="system" pointSize="31"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="27u-tH-Ng1">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="179"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="179" id="wgS-fX-O0J"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -33,6 +39,10 @@
                 <constraint firstItem="WUF-9v-dnU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="62" id="jM4-sH-acN"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="34.5" y="100.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="Background" width="938" height="1668"/>
+    </resources>
 </document>

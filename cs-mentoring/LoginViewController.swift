@@ -93,17 +93,7 @@ class LoginViewController: UIViewController {
   }
   
   func openProfile(userType: String) {
-    var viewController: UIViewController? = nil
-    if (userType == "Student") {
-      viewController = StudentProfileViewController()
-    } else if (userType == "Mentor") {
-      viewController = MentorProfileViewController()
-    } else if (userType == "Employee/Admin") {
-      viewController = AdminProfileViewController()
-    }
-    if (viewController != nil) {
-      self.navigationController?.navigationBar.isHidden = true
-      self.navigationController?.pushViewController(viewController!, animated: true)
-    }
+    UserDefaults.standard.set(userType, forKey: "userType")
+    performSegue(withIdentifier: "loginSuccess", sender: nil)
   }
 }

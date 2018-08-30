@@ -20,8 +20,14 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVD-7u-sM4">
-                    <rect key="frame" x="90" y="166" width="196" height="37"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="Hdb-5Z-LPl">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="179"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="179" id="JEJ-Nu-NoS"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Student Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVD-7u-sM4">
+                    <rect key="frame" x="89" y="187" width="196" height="37"/>
                     <fontDescription key="fontDescription" type="system" pointSize="31"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -33,6 +39,10 @@
                 <constraint firstItem="kVD-7u-sM4" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="siA-bh-6c2"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="34.5" y="100.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="Background" width="938" height="1668"/>
+    </resources>
 </document>

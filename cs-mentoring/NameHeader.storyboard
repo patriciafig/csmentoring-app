@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gIp-Ie-RPU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Name Header View Controller-->
+        <scene sceneID="rVu-QL-cdh">
+            <objects>
+                <viewController id="gIp-Ie-RPU" customClass="NameHeaderViewController" customModule="cs_mentoring" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="deh-7N-mYS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="104"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FvE-so-E5K">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="104"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pal-J4-RU3">
+                                        <rect key="frame" x="319" y="32" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="HZg-gB-lQx"/>
+                                            <constraint firstAttribute="width" constant="40" id="NGr-sx-cGF"/>
+                                        </constraints>
+                                        <state key="normal" image="editIcon"/>
+                                        <connections>
+                                            <action selector="editButtonTapped:" destination="gIp-Ie-RPU" eventType="touchUpInside" id="aHy-KI-wwM"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="sJD-As-d14">
+                                        <rect key="frame" x="20" y="32" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="Lsg-DA-BMr"/>
+                                            <constraint firstAttribute="height" constant="40" id="QVU-UH-7JA"/>
+                                        </constraints>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vJt-KC-oZc">
+                                        <rect key="frame" x="80" y="32" width="231" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Jake Johnson" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Of-fL-7Q1">
+                                                <rect key="frame" x="0.0" y="0.0" width="231" height="28"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oK6-WJ-jTW">
+                                                <rect key="frame" x="0.0" y="28" width="231" height="12"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="s8b-Us-0sL"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94509803921568625" green="0.97647058823529409" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="sJD-As-d14" firstAttribute="leading" secondItem="FvE-so-E5K" secondAttribute="leading" constant="20" id="DDG-7N-vIt"/>
+                                    <constraint firstItem="Pal-J4-RU3" firstAttribute="leading" secondItem="vJt-KC-oZc" secondAttribute="trailing" constant="8" id="DfV-be-jV4"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pal-J4-RU3" secondAttribute="trailing" constant="16" id="Faz-Em-ifL"/>
+                                    <constraint firstItem="vJt-KC-oZc" firstAttribute="centerY" secondItem="FvE-so-E5K" secondAttribute="centerY" id="Hpe-89-y8W"/>
+                                    <constraint firstAttribute="height" constant="104" id="RW2-XD-PCS"/>
+                                    <constraint firstItem="Pal-J4-RU3" firstAttribute="centerY" secondItem="FvE-so-E5K" secondAttribute="centerY" id="lqE-ET-KAH"/>
+                                    <constraint firstItem="vJt-KC-oZc" firstAttribute="leading" secondItem="sJD-As-d14" secondAttribute="trailing" constant="20" id="vW8-nV-jCm"/>
+                                    <constraint firstItem="sJD-As-d14" firstAttribute="centerY" secondItem="FvE-so-E5K" secondAttribute="centerY" id="ycZ-Du-4jK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tyP-Zg-MtV" firstAttribute="trailing" secondItem="FvE-so-E5K" secondAttribute="trailing" id="cuw-8T-Lkh"/>
+                            <constraint firstItem="FvE-so-E5K" firstAttribute="leading" secondItem="tyP-Zg-MtV" secondAttribute="leading" id="fK4-f2-oOE"/>
+                            <constraint firstAttribute="bottom" secondItem="FvE-so-E5K" secondAttribute="bottom" id="fq3-L4-KJ3"/>
+                            <constraint firstItem="FvE-so-E5K" firstAttribute="top" secondItem="deh-7N-mYS" secondAttribute="top" id="vQ9-Hs-r9Z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tyP-Zg-MtV"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="104"/>
+                    <connections>
+                        <outlet property="userName" destination="8Of-fL-7Q1" id="r97-EC-XnH"/>
+                        <outlet property="userType" destination="oK6-WJ-jTW" id="OHh-eU-Kgo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yqA-tl-jPA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="156" y="139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="editIcon" width="40" height="40"/>
+        <image name="profileIcon" width="40" height="40"/>
+    </resources>
+</document>
