@@ -69,7 +69,7 @@ class SignUpViewController: UIViewController {
     self.present(alert, animated: true, completion: nil)
   }
   
-  @IBAction func handleContinue(_ sender: UIButton) {
+  @IBAction func handleContinue(_ sender: UIButton) {/*
     sender.isEnabled = false;
     let name = fullNameTextField.text
     let email = emailTextField.text
@@ -120,7 +120,9 @@ class SignUpViewController: UIViewController {
       }
     })
     dataTask.resume()
+    */
     
+    openProfile(userType: "Student")
   }
   
   @objc func dismissKeyboard() {

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NCe-Dw-LcS">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bio View Controller-->
+        <scene sceneID="hvp-Wz-0JM">
+            <objects>
+                <viewController id="NCe-Dw-LcS" customClass="BioViewController" customModule="cs_mentoring" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OPM-KA-IB5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="171"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0DT-dY-Y5B">
+                                <rect key="frame" x="32" y="8" width="311" height="155"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Hi! My name is Rachel, I am a senior pursuing a Bachelor of Science in Computer Science. I am passionate about desing, web and mobile apps.  </string>
+                                        <attributes>
+                                            <font key="NSFont" size="16" name="Karla-Regular"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="truncatingTail" baseWritingDirection="natural" lineSpacing="10" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="uDb-O3-uId" firstAttribute="trailing" secondItem="0DT-dY-Y5B" secondAttribute="trailing" constant="32" id="1Wc-Kr-fAz"/>
+                            <constraint firstItem="0DT-dY-Y5B" firstAttribute="top" secondItem="uDb-O3-uId" secondAttribute="top" constant="8" id="cZS-m6-PxR"/>
+                            <constraint firstItem="uDb-O3-uId" firstAttribute="bottom" secondItem="0DT-dY-Y5B" secondAttribute="bottom" constant="8" id="iWh-wU-mR4"/>
+                            <constraint firstItem="0DT-dY-Y5B" firstAttribute="leading" secondItem="uDb-O3-uId" secondAttribute="leading" constant="32" id="st9-Kx-jAp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uDb-O3-uId"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="171"/>
+                    <connections>
+                        <outlet property="bioLabel" destination="0DT-dY-Y5B" id="QYY-Ib-L2P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="808-Vy-wis" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="139"/>
+        </scene>
+    </scenes>
+</document>
