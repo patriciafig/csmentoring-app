@@ -25,6 +25,9 @@
 		4D417DF5208D5B4E00B4E3FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D417DF3208D5B4E00B4E3FA /* LaunchScreen.storyboard */; };
 		4D4B62C42093BCDE00A674B5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D417DF6208D5B4E00B4E3FA /* Info.plist */; };
 		4D61D78F213E30CE001438DA /* InterestsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61D78E213E30CE001438DA /* InterestsCollectionViewCell.swift */; };
+		4D61D792213F014A001438DA /* Users.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D61D791213F014A001438DA /* Users.storyboard */; };
+		4D61D794213F0166001438DA /* UsersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61D793213F0166001438DA /* UsersViewController.swift */; };
+		4D61D797213F21C2001438DA /* CSColorPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61D796213F21C2001438DA /* CSColorPalette.swift */; };
 		4DEF73CE213A2B7900A71184 /* Bio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DEF73CD213A2B7900A71184 /* Bio.storyboard */; };
 		4DEF73D0213A2B8600A71184 /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEF73CF213A2B8600A71184 /* BioViewController.swift */; };
 		4DEF73D6213A31E700A71184 /* Karla-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DEF73D2213A31E700A71184 /* Karla-Regular.ttf */; };
@@ -55,6 +58,9 @@
 		4D417DF4208D5B4E00B4E3FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D417DF6208D5B4E00B4E3FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D61D78E213E30CE001438DA /* InterestsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsCollectionViewCell.swift; sourceTree = "<group>"; };
+		4D61D791213F014A001438DA /* Users.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Users.storyboard; sourceTree = "<group>"; };
+		4D61D793213F0166001438DA /* UsersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersViewController.swift; sourceTree = "<group>"; };
+		4D61D796213F21C2001438DA /* CSColorPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSColorPalette.swift; sourceTree = "<group>"; };
 		4DEF73CD213A2B7900A71184 /* Bio.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bio.storyboard; sourceTree = "<group>"; };
 		4DEF73CF213A2B8600A71184 /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
 		4DEF73D2213A31E700A71184 /* Karla-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Regular.ttf"; sourceTree = "<group>"; };
@@ -106,6 +112,7 @@
 				4D417DF3208D5B4E00B4E3FA /* LaunchScreen.storyboard */,
 				4D417DF6208D5B4E00B4E3FA /* Info.plist */,
 				4D417DEE208D5B4E00B4E3FA /* cs_mentoring.xcdatamodeld */,
+				4D61D796213F21C2001438DA /* CSColorPalette.swift */,
 				0AD47C4920904C02000F3319 /* LoginViewController.swift */,
 				0A5EE4F92091950E00A4C214 /* StudentProfileViewController.swift */,
 				0A5EE4FA2091950E00A4C214 /* StudentProfileViewController.xib */,
@@ -114,8 +121,18 @@
 				0A5EE5012091956F00A4C214 /* AdminProfileViewController.swift */,
 				0A5EE5022091956F00A4C214 /* AdminProfileViewController.xib */,
 				4D410570212D112400632D8F /* HomeScreenViewController.swift */,
+				4D61D790213F00E9001438DA /* Users */,
 			);
 			path = "cs-mentoring";
+			sourceTree = "<group>";
+		};
+		4D61D790213F00E9001438DA /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				4D61D791213F014A001438DA /* Users.storyboard */,
+				4D61D793213F0166001438DA /* UsersViewController.swift */,
+			);
+			path = Users;
 			sourceTree = "<group>";
 		};
 		4DEF73CB213A270200A71184 /* NameHeader */ = {
@@ -222,6 +239,7 @@
 				4DEF73D8213A31E700A71184 /* Karla-Bold.ttf in Resources */,
 				0A5EE5042091956F00A4C214 /* AdminProfileViewController.xib in Resources */,
 				4D417DF5208D5B4E00B4E3FA /* LaunchScreen.storyboard in Resources */,
+				4D61D792213F014A001438DA /* Users.storyboard in Resources */,
 				4D4B62C42093BCDE00A674B5 /* Info.plist in Resources */,
 				4DEF73D9213A31E700A71184 /* SpaceMono-Bold.ttf in Resources */,
 				4D417DF2208D5B4E00B4E3FA /* Assets.xcassets in Resources */,
@@ -242,8 +260,10 @@
 			files = (
 				0A5EE5032091956F00A4C214 /* AdminProfileViewController.swift in Sources */,
 				0A5EE4FB2091950E00A4C214 /* StudentProfileViewController.swift in Sources */,
+				4D61D794213F0166001438DA /* UsersViewController.swift in Sources */,
 				0A5EE4FF2091951F00A4C214 /* MentorProfileViewController.swift in Sources */,
 				4D417DF0208D5B4E00B4E3FA /* cs_mentoring.xcdatamodeld in Sources */,
+				4D61D797213F21C2001438DA /* CSColorPalette.swift in Sources */,
 				4DEF73DE213A32DD00A71184 /* InterestsViewController.swift in Sources */,
 				4D410571212D112400632D8F /* HomeScreenViewController.swift in Sources */,
 				0AAE8AFF208FA68C007FE373 /* SignUpViewController.swift in Sources */,

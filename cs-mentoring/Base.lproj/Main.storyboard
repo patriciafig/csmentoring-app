@@ -12,6 +12,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Karla-Bold.ttf">
+            <string>Karla-Bold</string>
+        </array>
         <array key="Karla-Regular.ttf">
             <string>Karla-Regular</string>
         </array>
@@ -124,7 +127,7 @@
                                     <constraint firstAttribute="height" constant="40" id="eLX-kQ-GyP"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="0k5-wL-vaZ">
@@ -139,7 +142,7 @@
                                     <constraint firstAttribute="height" constant="40" id="pug-1y-TGM"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lad-yg-vcW">
@@ -148,6 +151,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="5Xt-UV-Qvy"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Karla-Bold" family="Karla" pointSize="12"/>
                                 <state key="normal" title="CONTINUE">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -218,7 +222,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FWW-ME-jzQ" userLabel="contentView">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="638"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="JYp-2k-H0f">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="SignUpBackground" translatesAutoresizingMaskIntoConstraints="NO" id="JYp-2k-H0f">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="638"/>
                                             </imageView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YIH-4q-W9I">
@@ -230,7 +234,7 @@
                                                             <constraint firstAttribute="height" constant="40" id="cSa-Lh-NkL"/>
                                                         </constraints>
                                                         <color key="textColor" red="0.3921568627" green="0.3294117647" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" textContentType="name"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vtu-vE-dxa">
@@ -239,7 +243,7 @@
                                                             <constraint firstAttribute="height" constant="40" id="F79-Oo-wgb"/>
                                                         </constraints>
                                                         <color key="textColor" red="0.3921568627" green="0.3294117647" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                                     </textField>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="cqX-a0-gOR">
@@ -255,7 +259,7 @@
                                                             <constraint firstAttribute="height" constant="40" id="tUQ-IF-o33"/>
                                                         </constraints>
                                                         <color key="textColor" red="0.3921568627" green="0.3294117647" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" textContentType="username"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eTs-bE-viw">
@@ -264,7 +268,7 @@
                                                             <constraint firstAttribute="height" constant="40" id="kWL-vf-jU4"/>
                                                         </constraints>
                                                         <color key="textColor" red="0.3921568627" green="0.3294117647" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dRE-pR-KsV">
@@ -272,6 +276,7 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="40" id="eqo-C4-Mtb"/>
                                                         </constraints>
+                                                        <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="17"/>
                                                         <state key="normal" title="  Select an option">
                                                             <color key="titleColor" red="0.40784313729999999" green="0.32549019610000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
@@ -300,7 +305,7 @@
                                                             <constraint firstAttribute="height" constant="40" id="gSC-Uk-CQC"/>
                                                         </constraints>
                                                         <color key="textColor" red="0.3921568627" green="0.3294117647" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
                                                     </textField>
                                                 </subviews>
@@ -343,6 +348,11 @@
                                                 <state key="normal" title="CONTINUE">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="handleContinue:" destination="yRP-yl-YAD" eventType="touchUpInside" id="j2U-kl-sbL"/>
                                                 </connections>
@@ -543,6 +553,7 @@
     <resources>
         <image name="Background" width="938" height="1668"/>
         <image name="Logo" width="553" height="682"/>
+        <image name="SignUpBackground" width="375" height="667"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="dvz-Os-udD"/>
