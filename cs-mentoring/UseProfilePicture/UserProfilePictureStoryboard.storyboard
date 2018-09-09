@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lgX-cn-2vE">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Karla-Bold.ttf">
+            <string>Karla-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--User Profile Picture View Controller-->
+        <scene sceneID="VH5-ha-LWY">
+            <objects>
+                <viewController id="lgX-cn-2vE" customClass="UserProfilePictureViewController" customModule="cs_mentoring" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DUd-J7-KLA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="134"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MENTORS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Bp-yV-AhE">
+                                <rect key="frame" x="32" y="8" width="311" height="16.5"/>
+                                <fontDescription key="fontDescription" name="Karla-Bold" family="Karla" pointSize="14"/>
+                                <color key="textColor" red="0.14901960780000001" green="0.59999999999999998" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="mdM-h3-nEe">
+                                <rect key="frame" x="0.0" y="36.5" width="375" height="89.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NEO-K9-IeR">
+                                    <size key="itemSize" width="40" height="40"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="32" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UserProfilePictureCollectionViewCell" id="lX1-9m-eIQ" customClass="UserProfilePictureCollectionViewCell" customModule="cs_mentoring" customModuleProvider="target">
+                                        <rect key="frame" x="32" y="25" width="40" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UserIcon" translatesAutoresizingMaskIntoConstraints="NO" id="8wk-Go-TOB">
+                                                    <rect key="frame" x="0.0" y="-0.5" width="40" height="40"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <size key="customSize" width="40" height="40"/>
+                                        <connections>
+                                            <outlet property="profilePic" destination="8wk-Go-TOB" id="xcs-LA-N2k"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="R72-AG-90x" firstAttribute="trailing" secondItem="2Bp-yV-AhE" secondAttribute="trailing" constant="32" id="DPn-go-Dcf"/>
+                            <constraint firstItem="2Bp-yV-AhE" firstAttribute="leading" secondItem="R72-AG-90x" secondAttribute="leading" constant="32" id="GTH-QX-UaM"/>
+                            <constraint firstItem="mdM-h3-nEe" firstAttribute="top" secondItem="2Bp-yV-AhE" secondAttribute="bottom" constant="12" id="TrP-m3-PoC"/>
+                            <constraint firstItem="R72-AG-90x" firstAttribute="trailing" secondItem="mdM-h3-nEe" secondAttribute="trailing" id="gI3-qE-nqe"/>
+                            <constraint firstItem="mdM-h3-nEe" firstAttribute="leading" secondItem="R72-AG-90x" secondAttribute="leading" id="ifD-O3-XoO"/>
+                            <constraint firstItem="2Bp-yV-AhE" firstAttribute="top" secondItem="R72-AG-90x" secondAttribute="top" constant="8" id="mvW-Bu-Mdn"/>
+                            <constraint firstItem="R72-AG-90x" firstAttribute="bottom" secondItem="mdM-h3-nEe" secondAttribute="bottom" constant="8" id="wya-QK-7Mt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="R72-AG-90x"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="134"/>
+                    <connections>
+                        <outlet property="collectionView" destination="mdM-h3-nEe" id="IO9-Mt-Luc"/>
+                        <outlet property="headerLabel" destination="2Bp-yV-AhE" id="3P8-2l-0t2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VY6-QD-jGI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-31.199999999999999" y="168.21589205397302"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="UserIcon" width="40" height="40"/>
+    </resources>
+</document>

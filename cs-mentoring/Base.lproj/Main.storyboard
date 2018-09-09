@@ -413,14 +413,14 @@
             <objects>
                 <viewController id="8gI-rc-fBq" customClass="HomeScreenViewController" customModule="cs_mentoring" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wKx-dn-58Z">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="675"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mdf-fh-r3f">
-                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="611"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qpr-KA-xks">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="611"/>
                                         <subviews>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ime-qC-7Pq">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="104"/>
@@ -449,6 +449,15 @@
                                                     <segue destination="u10-OZ-Fpf" kind="embed" id="gjq-8H-szN"/>
                                                 </connections>
                                             </containerView>
+                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tqa-aa-FW2">
+                                                <rect key="frame" x="0.0" y="439" width="320" height="134"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="134" id="d1A-rp-245"/>
+                                                </constraints>
+                                                <connections>
+                                                    <segue destination="KOI-nq-Cmm" kind="embed" id="aI1-dD-cbn"/>
+                                                </connections>
+                                            </containerView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -457,7 +466,10 @@
                                             <constraint firstItem="ime-qC-7Pq" firstAttribute="top" secondItem="Qpr-KA-xks" secondAttribute="top" id="6Gy-gE-a6G"/>
                                             <constraint firstItem="bpH-gu-QEZ" firstAttribute="top" secondItem="Kyr-jt-bXq" secondAttribute="bottom" id="7Hr-UC-C9y"/>
                                             <constraint firstItem="Kyr-jt-bXq" firstAttribute="leading" secondItem="Qpr-KA-xks" secondAttribute="leading" id="Bse-KI-lLf"/>
+                                            <constraint firstItem="tqa-aa-FW2" firstAttribute="top" secondItem="bpH-gu-QEZ" secondAttribute="bottom" id="UR6-gq-he6"/>
+                                            <constraint firstItem="tqa-aa-FW2" firstAttribute="leading" secondItem="Qpr-KA-xks" secondAttribute="leading" id="WG8-DV-CR4"/>
                                             <constraint firstItem="ime-qC-7Pq" firstAttribute="leading" secondItem="Qpr-KA-xks" secondAttribute="leading" id="Xs8-BV-NNu"/>
+                                            <constraint firstAttribute="trailing" secondItem="tqa-aa-FW2" secondAttribute="trailing" id="iUs-Cm-jVW"/>
                                             <constraint firstAttribute="trailing" secondItem="bpH-gu-QEZ" secondAttribute="trailing" id="qIC-L9-kbd"/>
                                             <constraint firstAttribute="trailing" secondItem="Kyr-jt-bXq" secondAttribute="trailing" id="xew-9I-8fJ"/>
                                             <constraint firstAttribute="trailing" secondItem="ime-qC-7Pq" secondAttribute="trailing" id="yHe-cZ-1BZ"/>
@@ -484,6 +496,7 @@
                         <viewLayoutGuide key="safeArea" id="XkQ-ST-IIk"/>
                     </view>
                     <navigationItem key="navigationItem" id="YMX-M7-kaw"/>
+                    <size key="freeformSize" width="320" height="675"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zzb-R4-wjM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -512,6 +525,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fyK-Kw-acy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4582" y="114"/>
+        </scene>
+        <!--UserProfilePictureStoryboard-->
+        <scene sceneID="Nsb-hw-Zcm">
+            <objects>
+                <viewControllerPlaceholder storyboardName="UserProfilePictureStoryboard" id="KOI-nq-Cmm" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fvQ-dX-7v9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4631" y="238"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sXr-fm-xEc">

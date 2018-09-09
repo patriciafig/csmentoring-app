@@ -24,7 +24,7 @@ class InterestsViewController: UIViewController, UICollectionViewDelegateFlowLay
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return interests.count
-    }
+    }    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "interestsCell", for: indexPath) as! InterestsCollectionViewCell
@@ -48,14 +48,17 @@ class InterestsViewController: UIViewController, UICollectionViewDelegateFlowLay
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        /*
+     /*
         let height = collectionView.bounds.height
         let numberOfCells = interests.count
         
         let widthFromSpacing: CGFloat = CGFloat(interests.count - 1) * 11.0
         let cumulativeWidth: CGFloat = interests.reduce(0) { $0 + cellWidth(given: $1) } + widthFromSpacing
-        */
+     
         return UIEdgeInsets(top: 8, left: 0, bottom: 8, right: 0)
+    */
+        return UIEdgeInsets (top: 8, left: 0, bottom: 8, right: 0)
+    
     }
     
     private func cellWidth(given text: String) -> CGFloat {
