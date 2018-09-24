@@ -69,7 +69,7 @@ class SignUpViewController: UIViewController {
     self.present(alert, animated: true, completion: nil)
   }
   
-  @IBAction func handleContinue(_ sender: UIButton) {/*
+  @IBAction func handleContinue(_ sender: UIButton) {
     sender.isEnabled = false;
     let name = fullNameTextField.text
     let email = emailTextField.text
@@ -120,7 +120,7 @@ class SignUpViewController: UIViewController {
       }
     })
     dataTask.resume()
-    */
+    
     
     openProfile(userType: "Student")
   }
@@ -131,6 +131,11 @@ class SignUpViewController: UIViewController {
 
   func openProfile(userType: String) {
     UserDefaults.standard.set(userType, forKey: "userType")
-    performSegue(withIdentifier: "signUpSuccess", sender: nil)
+    //Instead of pushing to home view controller from segue, replace with the root view controller of the window
+    if let window = UIApplication.shared.keyWindow {
+        let tabViewController = HomeScreenNavigationController()
+        window.rootViewController = tabViewController
+    }
+     //performSegue(withIdentifier: "signUpSuccess", sender: nil)
   }
 }

@@ -201,7 +201,6 @@
                         <outlet property="emailTextField" destination="LWk-yg-HRh" id="oQ0-co-r1i"/>
                         <outlet property="loginWithFacebookButton" destination="TFm-j9-WbK" id="I9H-Nm-34w"/>
                         <outlet property="passwordTextField" destination="oCy-ZG-QIL" id="A1W-di-Q3a"/>
-                        <segue destination="qjY-I9-dsf" kind="show" identifier="loginSuccess" animates="NO" id="WxP-lU-EHB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBF-GD-zNO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -401,7 +400,6 @@
                         <outlet property="passwordTextField" destination="eTs-bE-viw" id="nOQ-XY-MHi"/>
                         <outlet property="selectAnOptionButton" destination="dRE-pR-KsV" id="1mQ-Jd-DSr"/>
                         <outlet property="usernameTextField" destination="m3A-pa-hRE" id="gAb-WT-6C4"/>
-                        <segue destination="qjY-I9-dsf" kind="show" identifier="signUpSuccess" animates="NO" id="dvz-Os-udD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Izl-Qp-WzP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -411,7 +409,7 @@
         <!--Home Screen View Controller-->
         <scene sceneID="pkj-5N-e4o">
             <objects>
-                <viewController id="8gI-rc-fBq" customClass="HomeScreenViewController" customModule="cs_mentoring" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeScreenViewController" id="8gI-rc-fBq" customClass="HomeScreenViewController" customModule="cs_mentoring" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wKx-dn-58Z">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="675"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -495,12 +493,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XkQ-ST-IIk"/>
                     </view>
-                    <navigationItem key="navigationItem" id="YMX-M7-kaw"/>
+                    <navigationItem key="navigationItem" id="YMX-M7-kaw">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="Hamburgericon" id="pEi-Y0-GzW">
+                            <connections>
+                                <action selector="hamburgerButtonTapped:" destination="8gI-rc-fBq" id="ueZ-tx-lAY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <size key="freeformSize" width="320" height="675"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zzb-R4-wjM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3780" y="32.74647887323944"/>
+            <point key="canvasLocation" x="3701" y="68"/>
         </scene>
         <!--NameHeader-->
         <scene sceneID="JX8-Hs-UXc">
@@ -552,10 +556,10 @@
             </objects>
             <point key="canvasLocation" x="32.799999999999997" y="33.251231527093594"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Home Screen Navigation Controller-->
         <scene sceneID="5SH-uB-tpA">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qjY-I9-dsf" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qjY-I9-dsf" customClass="HomeScreenNavigationController" customModule="cs_mentoring" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="H0t-lf-IHP">
                         <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -568,15 +572,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8yB-Fl-sno" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2910" y="33"/>
+            <point key="canvasLocation" x="2901" y="67"/>
         </scene>
     </scenes>
     <resources>
         <image name="Background" width="938" height="1668"/>
+        <image name="Hamburgericon" width="16" height="16"/>
         <image name="Logo" width="553" height="682"/>
         <image name="SignUpBackground" width="375" height="667"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="dvz-Os-udD"/>
-    </inferredMetricsTieBreakers>
 </document>

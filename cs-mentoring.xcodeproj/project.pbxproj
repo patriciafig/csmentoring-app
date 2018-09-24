@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A5EE4FB2091950E00A4C214 /* StudentProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EE4F92091950E00A4C214 /* StudentProfileViewController.swift */; };
-		0A5EE4FC2091950E00A4C214 /* StudentProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A5EE4FA2091950E00A4C214 /* StudentProfileViewController.xib */; };
-		0A5EE4FF2091951F00A4C214 /* MentorProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EE4FD2091951F00A4C214 /* MentorProfileViewController.swift */; };
-		0A5EE5002091951F00A4C214 /* MentorProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A5EE4FE2091951F00A4C214 /* MentorProfileViewController.xib */; };
-		0A5EE5032091956F00A4C214 /* AdminProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A5EE5012091956F00A4C214 /* AdminProfileViewController.swift */; };
-		0A5EE5042091956F00A4C214 /* AdminProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A5EE5022091956F00A4C214 /* AdminProfileViewController.xib */; };
 		0AAE8AFF208FA68C007FE373 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAE8AFE208FA68C007FE373 /* SignUpViewController.swift */; };
 		0AD47C4A20904C02000F3319 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD47C4920904C02000F3319 /* LoginViewController.swift */; };
 		4D410571212D112400632D8F /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D410570212D112400632D8F /* HomeScreenViewController.swift */; };
@@ -28,6 +22,10 @@
 		4D78A3EF21439203007DD8A3 /* UserProfilePictureStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D78A3EE21439203007DD8A3 /* UserProfilePictureStoryboard.storyboard */; };
 		4D78A3F32143987B007DD8A3 /* UserProfilePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78A3F22143987B007DD8A3 /* UserProfilePictureViewController.swift */; };
 		4D78A3F72143AA07007DD8A3 /* UserProfilePictureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78A3F62143AA07007DD8A3 /* UserProfilePictureCollectionViewCell.swift */; };
+		4DD0C86E215969DC00F7D5F9 /* SlideOutMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0C86D215969DC00F7D5F9 /* SlideOutMenuTableViewCell.swift */; };
+		4DD0C8702159710800F7D5F9 /* HomeScreenNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0C86F2159710800F7D5F9 /* HomeScreenNavigationController.swift */; };
+		4DE75D0F21461B6B0016DD35 /* SlideOutMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DE75D0E21461B6B0016DD35 /* SlideOutMenu.storyboard */; };
+		4DE75D1121463F1C0016DD35 /* SlideOutMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DE75D1021463F1C0016DD35 /* SlideOutMenuViewController.swift */; };
 		4DEF73CE213A2B7900A71184 /* Bio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DEF73CD213A2B7900A71184 /* Bio.storyboard */; };
 		4DEF73D0213A2B8600A71184 /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEF73CF213A2B8600A71184 /* BioViewController.swift */; };
 		4DEF73D6213A31E700A71184 /* Karla-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DEF73D2213A31E700A71184 /* Karla-Regular.ttf */; };
@@ -36,17 +34,13 @@
 		4DEF73D9213A31E700A71184 /* SpaceMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DEF73D5213A31E700A71184 /* SpaceMono-Bold.ttf */; };
 		4DEF73DC213A32D000A71184 /* Interests.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DEF73DB213A32D000A71184 /* Interests.storyboard */; };
 		4DEF73DE213A32DD00A71184 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEF73DD213A32DD00A71184 /* InterestsViewController.swift */; };
+		ED66C3497C26CEAE844E4CC4 /* Pods_cs_mentoring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A4AC3D89E4599613E6DB78 /* Pods_cs_mentoring.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A5EE4F92091950E00A4C214 /* StudentProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfileViewController.swift; sourceTree = "<group>"; };
-		0A5EE4FA2091950E00A4C214 /* StudentProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudentProfileViewController.xib; sourceTree = "<group>"; };
-		0A5EE4FD2091951F00A4C214 /* MentorProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorProfileViewController.swift; sourceTree = "<group>"; };
-		0A5EE4FE2091951F00A4C214 /* MentorProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MentorProfileViewController.xib; sourceTree = "<group>"; };
-		0A5EE5012091956F00A4C214 /* AdminProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminProfileViewController.swift; sourceTree = "<group>"; };
-		0A5EE5022091956F00A4C214 /* AdminProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminProfileViewController.xib; sourceTree = "<group>"; };
 		0AAE8AFE208FA68C007FE373 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0AD47C4920904C02000F3319 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1E7F378B23B921710D15FE1D /* Pods-cs-mentoring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cs-mentoring.release.xcconfig"; path = "Pods/Target Support Files/Pods-cs-mentoring/Pods-cs-mentoring.release.xcconfig"; sourceTree = "<group>"; };
 		4D410570212D112400632D8F /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		4D410572212D15CC00632D8F /* NameHeader.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NameHeader.storyboard; sourceTree = "<group>"; };
 		4D410574212D197F00632D8F /* NameHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameHeaderViewController.swift; sourceTree = "<group>"; };
@@ -62,6 +56,10 @@
 		4D78A3EE21439203007DD8A3 /* UserProfilePictureStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfilePictureStoryboard.storyboard; sourceTree = "<group>"; };
 		4D78A3F22143987B007DD8A3 /* UserProfilePictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilePictureViewController.swift; sourceTree = "<group>"; };
 		4D78A3F62143AA07007DD8A3 /* UserProfilePictureCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfilePictureCollectionViewCell.swift; sourceTree = "<group>"; };
+		4DD0C86D215969DC00F7D5F9 /* SlideOutMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOutMenuTableViewCell.swift; sourceTree = "<group>"; };
+		4DD0C86F2159710800F7D5F9 /* HomeScreenNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenNavigationController.swift; sourceTree = "<group>"; };
+		4DE75D0E21461B6B0016DD35 /* SlideOutMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SlideOutMenu.storyboard; sourceTree = "<group>"; };
+		4DE75D1021463F1C0016DD35 /* SlideOutMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOutMenuViewController.swift; sourceTree = "<group>"; };
 		4DEF73CD213A2B7900A71184 /* Bio.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Bio.storyboard; sourceTree = "<group>"; };
 		4DEF73CF213A2B8600A71184 /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
 		4DEF73D2213A31E700A71184 /* Karla-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Karla-Regular.ttf"; sourceTree = "<group>"; };
@@ -70,6 +68,8 @@
 		4DEF73D5213A31E700A71184 /* SpaceMono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceMono-Bold.ttf"; sourceTree = "<group>"; };
 		4DEF73DB213A32D000A71184 /* Interests.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interests.storyboard; sourceTree = "<group>"; };
 		4DEF73DD213A32DD00A71184 /* InterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
+		A1A4AC3D89E4599613E6DB78 /* Pods_cs_mentoring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cs_mentoring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D076CC044481A878C4EE471D /* Pods-cs-mentoring.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cs-mentoring.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cs-mentoring/Pods-cs-mentoring.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,17 +77,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED66C3497C26CEAE844E4CC4 /* Pods_cs_mentoring.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D199C00C777626F2D0D0E3C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D076CC044481A878C4EE471D /* Pods-cs-mentoring.debug.xcconfig */,
+				1E7F378B23B921710D15FE1D /* Pods-cs-mentoring.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		4D417DDB208D5B4E00B4E3FA = {
 			isa = PBXGroup;
 			children = (
 				4D417DE6208D5B4E00B4E3FA /* cs-mentoring */,
 				4D417DE5208D5B4E00B4E3FA /* Products */,
+				2D199C00C777626F2D0D0E3C /* Pods */,
+				8950E2560A64B459E1120BA2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +114,7 @@
 		4D417DE6208D5B4E00B4E3FA /* cs-mentoring */ = {
 			isa = PBXGroup;
 			children = (
+				4DE75D0D21461B440016DD35 /* SlideOutMenu */,
 				4D78A3ED2143911C007DD8A3 /* UseProfilePicture */,
 				4D78A3EA21408797007DD8A3 /* Style */,
 				4DEF73DA213A32C100A71184 /* Interests */,
@@ -116,13 +129,8 @@
 				4D417DF6208D5B4E00B4E3FA /* Info.plist */,
 				4D417DEE208D5B4E00B4E3FA /* cs_mentoring.xcdatamodeld */,
 				0AD47C4920904C02000F3319 /* LoginViewController.swift */,
-				0A5EE4F92091950E00A4C214 /* StudentProfileViewController.swift */,
-				0A5EE4FA2091950E00A4C214 /* StudentProfileViewController.xib */,
-				0A5EE4FD2091951F00A4C214 /* MentorProfileViewController.swift */,
-				0A5EE4FE2091951F00A4C214 /* MentorProfileViewController.xib */,
-				0A5EE5012091956F00A4C214 /* AdminProfileViewController.swift */,
-				0A5EE5022091956F00A4C214 /* AdminProfileViewController.xib */,
 				4D410570212D112400632D8F /* HomeScreenViewController.swift */,
+				4DD0C86F2159710800F7D5F9 /* HomeScreenNavigationController.swift */,
 			);
 			path = "cs-mentoring";
 			sourceTree = "<group>";
@@ -143,6 +151,16 @@
 				4D78A3EE21439203007DD8A3 /* UserProfilePictureStoryboard.storyboard */,
 			);
 			path = UseProfilePicture;
+			sourceTree = "<group>";
+		};
+		4DE75D0D21461B440016DD35 /* SlideOutMenu */ = {
+			isa = PBXGroup;
+			children = (
+				4DE75D0E21461B6B0016DD35 /* SlideOutMenu.storyboard */,
+				4DD0C86D215969DC00F7D5F9 /* SlideOutMenuTableViewCell.swift */,
+				4DE75D1021463F1C0016DD35 /* SlideOutMenuViewController.swift */,
+			);
+			path = SlideOutMenu;
 			sourceTree = "<group>";
 		};
 		4DEF73CB213A270200A71184 /* NameHeader */ = {
@@ -184,6 +202,14 @@
 			path = Interests;
 			sourceTree = "<group>";
 		};
+		8950E2560A64B459E1120BA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1A4AC3D89E4599613E6DB78 /* Pods_cs_mentoring.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,9 +217,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4D417DF9208D5B4E00B4E3FA /* Build configuration list for PBXNativeTarget "cs-mentoring" */;
 			buildPhases = (
+				2A3BAAD294FC3A3C5757A1F6 /* [CP] Check Pods Manifest.lock */,
 				4D417DE0208D5B4E00B4E3FA /* Sources */,
 				4D417DE1208D5B4E00B4E3FA /* Frameworks */,
 				4D417DE2208D5B4E00B4E3FA /* Resources */,
+				8292CCF495BB34C22D8E0EFE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,14 +271,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A5EE5002091951F00A4C214 /* MentorProfileViewController.xib in Resources */,
 				4DEF73D7213A31E700A71184 /* SpaceMono-Regular.ttf in Resources */,
-				0A5EE4FC2091950E00A4C214 /* StudentProfileViewController.xib in Resources */,
 				4DEF73D8213A31E700A71184 /* Karla-Bold.ttf in Resources */,
-				0A5EE5042091956F00A4C214 /* AdminProfileViewController.xib in Resources */,
 				4D417DF5208D5B4E00B4E3FA /* LaunchScreen.storyboard in Resources */,
 				4DEF73D9213A31E700A71184 /* SpaceMono-Bold.ttf in Resources */,
 				4D417DF2208D5B4E00B4E3FA /* Assets.xcassets in Resources */,
+				4DE75D0F21461B6B0016DD35 /* SlideOutMenu.storyboard in Resources */,
 				4DEF73CE213A2B7900A71184 /* Bio.storyboard in Resources */,
 				4DEF73DC213A32D000A71184 /* Interests.storyboard in Resources */,
 				4DEF73D6213A31E700A71184 /* Karla-Regular.ttf in Resources */,
@@ -262,20 +288,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2A3BAAD294FC3A3C5757A1F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-cs-mentoring-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8292CCF495BB34C22D8E0EFE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-cs-mentoring/Pods-cs-mentoring-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MMDrawerController/MMDrawerController.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMDrawerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-cs-mentoring/Pods-cs-mentoring-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4D417DE0208D5B4E00B4E3FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A5EE5032091956F00A4C214 /* AdminProfileViewController.swift in Sources */,
-				0A5EE4FB2091950E00A4C214 /* StudentProfileViewController.swift in Sources */,
-				0A5EE4FF2091951F00A4C214 /* MentorProfileViewController.swift in Sources */,
+				4DE75D1121463F1C0016DD35 /* SlideOutMenuViewController.swift in Sources */,
 				4D417DF0208D5B4E00B4E3FA /* cs_mentoring.xcdatamodeld in Sources */,
+				4DD0C8702159710800F7D5F9 /* HomeScreenNavigationController.swift in Sources */,
 				4D78A3F32143987B007DD8A3 /* UserProfilePictureViewController.swift in Sources */,
 				4D61D797213F21C2001438DA /* Extensions.swift in Sources */,
 				4DEF73DE213A32DD00A71184 /* InterestsViewController.swift in Sources */,
 				4D410571212D112400632D8F /* HomeScreenViewController.swift in Sources */,
 				0AAE8AFF208FA68C007FE373 /* SignUpViewController.swift in Sources */,
+				4DD0C86E215969DC00F7D5F9 /* SlideOutMenuTableViewCell.swift in Sources */,
 				0AD47C4A20904C02000F3319 /* LoginViewController.swift in Sources */,
 				4D61D78F213E30CE001438DA /* InterestsCollectionViewCell.swift in Sources */,
 				4D410575212D197F00632D8F /* NameHeaderViewController.swift in Sources */,
@@ -420,6 +487,7 @@
 		};
 		4D417DFA208D5B4E00B4E3FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D076CC044481A878C4EE471D /* Pods-cs-mentoring.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -435,6 +503,7 @@
 		};
 		4D417DFB208D5B4E00B4E3FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E7F378B23B921710D15FE1D /* Pods-cs-mentoring.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

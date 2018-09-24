@@ -94,6 +94,11 @@ class LoginViewController: UIViewController {
   
   func openProfile(userType: String) {
     UserDefaults.standard.set(userType, forKey: "userType")
-    performSegue(withIdentifier: "loginSuccess", sender: nil)
+    
+    if let window = UIApplication.shared.keyWindow {
+        let tabViewController = HomeScreenNavigationController()
+        window.rootViewController = tabViewController
+    }
+     //performSegue(withIdentifier: "loginSuccess", sender: nil)
   }
 }
