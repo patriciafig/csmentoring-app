@@ -15,23 +15,22 @@ class HomeScreenNavigationController: MMDrawerController {
         super.viewDidLoad()
         //get the right storyboard
         
-        let slideOutMenuStoryBoard:UIStoryboard     =   UIStoryboard(name: "SlideOutMenu", bundle: nil)
+        let slideOutMenuStoryBoard:UIStoryboard = UIStoryboard(name: "SlideOutMenu", bundle: nil)
         //set the left view controller as the slide menu
-        
         let leftViewController  =   slideOutMenuStoryBoard.instantiateViewController(withIdentifier: "SlideOutMenuViewController") as! SlideOutMenuViewController
         
-        //nav
-        let leftSideNav     =   leftViewController
-        let mainStoryBoard :UIStoryboard     =   UIStoryboard(name: "Main", bundle: nil)
+        //navegation
+        let leftSideNav = leftViewController
+        let mainStoryBoard :UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let homeVc  =   mainStoryBoard.instantiateViewController(withIdentifier: "HomeScreenViewController") as! HomeScreenViewController
         homeVc.drawerController = self
         //centering code:
-        let centerNav     =   UINavigationController(rootViewController: homeVc)
+        let centerNav = UINavigationController(rootViewController: homeVc)
         
-        centerContainer =   MMDrawerController(center: centerNav, leftDrawerViewController: leftSideNav)
+        centerContainer = MMDrawerController(center: centerNav, leftDrawerViewController: leftSideNav)
         centerViewController = centerContainer
-        centerContainer!.openDrawerGestureModeMask  =   MMOpenDrawerGestureMode.panningCenterView
-        centerContainer!.closeDrawerGestureModeMask =   MMCloseDrawerGestureMode.panningCenterView
+        centerContainer!.openDrawerGestureModeMask  = MMOpenDrawerGestureMode.panningCenterView
+        centerContainer!.closeDrawerGestureModeMask = MMCloseDrawerGestureMode.panningCenterView
         
         // adjust drawer width
         centerContainer?.setMaximumLeftDrawerWidth(220, animated: true, completion: nil)

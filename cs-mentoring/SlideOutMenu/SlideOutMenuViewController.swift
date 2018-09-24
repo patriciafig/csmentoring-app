@@ -8,7 +8,7 @@
 
 import UIKit
 
-//model class for list in slideout menu
+//test model class for list in slideout menu
 struct SlideOutMenuItems {
     var menuIcon : UIImage
     var menuLabel : String
@@ -43,8 +43,8 @@ class SlideOutMenuViewController: UIViewController,UITableViewDataSource,UITable
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //add code here to handle what happens when user taps a cell
-        //i.e. you may want to segue somewhere and so on
+        
+        //TODO: handle what happens when user taps a cell
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId) as! SlideOutMenuTableViewCell
         cell.menuItem = self.menuItems[indexPath.row]
         return cell
