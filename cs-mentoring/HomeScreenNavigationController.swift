@@ -22,14 +22,14 @@ class HomeScreenNavigationController: MMDrawerController {
         //navegation
         let leftSideNav = leftViewController
         let mainStoryBoard :UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let homeVc  =   mainStoryBoard.instantiateViewController(withIdentifier: "HomeScreenViewController") as! HomeScreenViewController
-        homeVc.drawerController = self
+        let homeViewController = mainStoryBoard.instantiateViewController(withIdentifier: "HomeScreenViewController") as! HomeScreenViewController
+        homeViewController.drawerController = self
         //centering code:
-        let centerNav = UINavigationController(rootViewController: homeVc)
+        let centerNav = UINavigationController(rootViewController: homeViewController)
         
         centerContainer = MMDrawerController(center: centerNav, leftDrawerViewController: leftSideNav)
         centerViewController = centerContainer
-        centerContainer!.openDrawerGestureModeMask  = MMOpenDrawerGestureMode.panningCenterView
+        centerContainer!.openDrawerGestureModeMask = MMOpenDrawerGestureMode.panningCenterView
         centerContainer!.closeDrawerGestureModeMask = MMCloseDrawerGestureMode.panningCenterView
         
         // adjust drawer width
