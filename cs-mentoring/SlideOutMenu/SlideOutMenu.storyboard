@@ -9,14 +9,6 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="SpaceMono-Bold.ttf">
-            <string>SpaceMono-Bold</string>
-        </array>
-        <array key="SpaceMono-Regular.ttf">
-            <string>SpaceMono-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Slide Out Menu View Controller-->
         <scene sceneID="n86-d5-Fa5">
@@ -70,47 +62,6 @@
                                     <outlet property="delegate" destination="Ohs-ci-8Yv" id="FvY-on-lKg"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rRn-HN-fLe">
-                                <rect key="frame" x="0.0" y="20" width="375" height="104"/>
-                                <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="ui6-aV-dpp">
-                                        <rect key="frame" x="20" y="32" width="40" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="oFQ-Dx-UCN"/>
-                                            <constraint firstAttribute="width" constant="40" id="rKu-md-RNt"/>
-                                        </constraints>
-                                    </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="28T-4T-IeA">
-                                        <rect key="frame" x="80" y="32" width="275" height="40"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Jake Johnson" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W3f-Fz-13e">
-                                                <rect key="frame" x="0.0" y="0.0" width="275" height="22.5"/>
-                                                <fontDescription key="fontDescription" name="SpaceMono-Bold" family="Space Mono" pointSize="15"/>
-                                                <color key="textColor" red="0.14901960780000001" green="0.59999999999999998" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Student" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QPO-pD-2Ch">
-                                                <rect key="frame" x="0.0" y="22.5" width="275" height="17.5"/>
-                                                <fontDescription key="fontDescription" name="SpaceMono-Regular" family="Space Mono" pointSize="12"/>
-                                                <color key="textColor" red="0.14901960780000001" green="0.59999999999999998" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="Nfk-Zp-ynT"/>
-                                        </constraints>
-                                    </stackView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.94509803920000002" green="0.97647058819999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="28T-4T-IeA" secondAttribute="trailing" constant="20" id="8Hr-Z3-zyX"/>
-                                    <constraint firstItem="28T-4T-IeA" firstAttribute="leading" secondItem="ui6-aV-dpp" secondAttribute="trailing" constant="20" id="EV2-Rl-bD4"/>
-                                    <constraint firstItem="ui6-aV-dpp" firstAttribute="centerY" secondItem="rRn-HN-fLe" secondAttribute="centerY" id="QJ3-Z0-Ro0"/>
-                                    <constraint firstItem="28T-4T-IeA" firstAttribute="centerY" secondItem="rRn-HN-fLe" secondAttribute="centerY" id="Rnw-XR-Xgp"/>
-                                    <constraint firstItem="ui6-aV-dpp" firstAttribute="leading" secondItem="rRn-HN-fLe" secondAttribute="leading" constant="20" id="VKR-8h-nQX"/>
-                                    <constraint firstAttribute="height" constant="104" id="woY-lm-nzb"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kqv-Es-N06">
                                 <rect key="frame" x="0.0" y="567" width="375" height="100"/>
                                 <color key="backgroundColor" red="0.35294117650000001" green="0.88235294119999996" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -118,19 +69,28 @@
                                     <constraint firstAttribute="height" constant="100" id="YM1-TX-ppJ"/>
                                 </constraints>
                             </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ei2-3Y-MMO">
+                                <rect key="frame" x="0.0" y="20" width="375" height="104"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="104" id="CHf-V8-rox"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="Qq0-cz-5Mp" kind="embed" id="mtf-Fg-uSP"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="rRn-HN-fLe" firstAttribute="top" secondItem="55i-CV-WsB" secondAttribute="top" id="2vJ-iH-i5e"/>
-                            <constraint firstItem="rRn-HN-fLe" firstAttribute="trailing" secondItem="55i-CV-WsB" secondAttribute="trailing" id="Fbm-jQ-osf"/>
+                            <constraint firstItem="wlV-sD-syd" firstAttribute="top" secondItem="ei2-3Y-MMO" secondAttribute="bottom" id="AHM-dg-7h4"/>
                             <constraint firstItem="kqv-Es-N06" firstAttribute="top" secondItem="wlV-sD-syd" secondAttribute="bottom" id="Gnm-7R-Zb9"/>
-                            <constraint firstItem="rRn-HN-fLe" firstAttribute="leading" secondItem="55i-CV-WsB" secondAttribute="leading" id="IQ6-9b-2UY"/>
                             <constraint firstAttribute="bottom" secondItem="kqv-Es-N06" secondAttribute="bottom" id="J5U-vv-UsN"/>
                             <constraint firstItem="55i-CV-WsB" firstAttribute="trailing" secondItem="wlV-sD-syd" secondAttribute="trailing" id="LjC-q4-ncu"/>
+                            <constraint firstItem="ei2-3Y-MMO" firstAttribute="leading" secondItem="55i-CV-WsB" secondAttribute="leading" id="Pb1-z7-XWl"/>
                             <constraint firstItem="kqv-Es-N06" firstAttribute="leading" secondItem="55i-CV-WsB" secondAttribute="leading" id="QIr-Gl-Tz7"/>
+                            <constraint firstItem="ei2-3Y-MMO" firstAttribute="top" secondItem="55i-CV-WsB" secondAttribute="top" id="Zru-7W-GeH"/>
                             <constraint firstItem="55i-CV-WsB" firstAttribute="trailing" secondItem="kqv-Es-N06" secondAttribute="trailing" id="aEx-4U-y7n"/>
                             <constraint firstItem="wlV-sD-syd" firstAttribute="leading" secondItem="55i-CV-WsB" secondAttribute="leading" id="heG-7K-c5Z"/>
-                            <constraint firstItem="wlV-sD-syd" firstAttribute="top" secondItem="rRn-HN-fLe" secondAttribute="bottom" id="w1j-FN-5K3"/>
+                            <constraint firstItem="ei2-3Y-MMO" firstAttribute="trailing" secondItem="55i-CV-WsB" secondAttribute="trailing" id="znT-q3-rYf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="55i-CV-WsB"/>
                     </view>
@@ -145,10 +105,17 @@
             </objects>
             <point key="canvasLocation" x="1132" y="53.523238380809602"/>
         </scene>
+        <!--NameHeader-->
+        <scene sceneID="Pix-mQ-sGP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NameHeader" id="Qq0-cz-5Mp" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sql-9i-Vs7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1702" y="-179"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Hamburgericon" width="16" height="16"/>
         <image name="circleicon" width="40" height="40"/>
-        <image name="profileIcon" width="40" height="40"/>
     </resources>
 </document>
