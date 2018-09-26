@@ -75,6 +75,7 @@ class LoginViewController: UIViewController {
             let responseJson = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String: Any]
             if (responseJson["state"] as! String == "success") {
               let user = responseJson["user"] as! NSDictionary
+             
               self.openProfile(userType: user.value(forKey: "userType") as! String)
             } else {
               self.showAlert(title: "Success", message: responseJson.description)

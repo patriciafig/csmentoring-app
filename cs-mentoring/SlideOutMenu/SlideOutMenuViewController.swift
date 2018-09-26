@@ -24,14 +24,13 @@ class SlideOutMenuViewController: UIViewController,UITableViewDataSource,UITable
     
     var menuItems = [SlideOutMenuItems]()
     
-    
-    
     @IBOutlet weak var tableView: UITableView!
     let cellId = "menuCell"
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.separatorStyle = .none
-        // add items to list as you require
+        // add items to list
         for i in 0...20{
             menuItems.append(SlideOutMenuItems(menuIcon: #imageLiteral(resourceName: "UserIcon"), menuLabel: "Test Item \(i)"))
             
@@ -40,7 +39,6 @@ class SlideOutMenuViewController: UIViewController,UITableViewDataSource,UITable
         }
         
     }
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         

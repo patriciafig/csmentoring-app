@@ -16,6 +16,13 @@ extension UIColor {
         }
     }
     
+    // Represents the color CloudBlue #F1F9FF
+    static var CloudBlue: UIColor {
+        get{
+            return UIColor(red: 241.0/255.0, green: 249.0/255.0, blue: 255.0/255.0, alpha: 1)
+        }
+    }
+    
     // Represents the color SkyBlue #2699FB, whose RGB values are (38, 153, 251)
     static var SkyBlue: UIColor {
         get {
@@ -24,6 +31,7 @@ extension UIColor {
     }
     
     // Represents the color RoyalPurple #6759FF, whose RGB values are (103, 89, 255)
+    // MENTOR
     static var RoyalPurple: UIColor {
         get {
             return UIColor(red: 103.0/255.0, green: 89.0/255, blue: 255.0/255.0, alpha: 1)
