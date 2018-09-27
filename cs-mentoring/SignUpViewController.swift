@@ -109,7 +109,11 @@ class SignUpViewController: UIViewController {
             let responseJson = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String: Any]
             if (responseJson["state"] as! String == "success") {
               let user = responseJson["user"] as! NSDictionary
-              self.openProfile(userType: user.value(forKey: "userType") as! String)
+                //save username and userType  into UserDefaults
+             UserDefaults.standard.set(user.value(forKey: "username") as! String, forKey: "userFullName")
+             UserDefaults.standard.set(user.value(forKey: "userType") as! String, forKey: "userType")
+                
+              self.openProfile()
             } else {
               self.showAlert(title: "Success", message: responseJson.description)
             }
@@ -121,16 +125,14 @@ class SignUpViewController: UIViewController {
     })
     dataTask.resume()
     
-    
-    openProfile(userType: "Student")
+    // openProfile(userType: "Student")
   }
   
   @objc func dismissKeyboard() {
     view.endEditing(true)
   }
 
-  func openProfile(userType: String) {
-    UserDefaults.standard.set(userType, forKey: "userType")
+  func openProfile() {
     //Instead of pushing to home view controller from segue, replace with the root view controller of the window
     if let window = UIApplication.shared.keyWindow {
         let tabViewController = HomeScreenNavigationController()
