@@ -21,11 +21,20 @@ class SlideOutMenuTableViewCell: UITableViewCell {
     @IBOutlet weak var menuIcon: UIImageView!
     @IBOutlet weak var menuLabel: UILabel!
     
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        let userTypeString = UserDefaults.standard.string(forKey: "userType") ?? "No type set"
+        if userTypeString == "Student" {
+            self.menuLabel.textColor = .white
+            backgroundColor = UIColor.SeaBlue
+        } else if userTypeString == "Mentor" {
+            self.menuLabel.textColor = UIColor.RoyalPurple
+            backgroundColor = UIColor.CloudBlue
+        } else if userTypeString == "Admin" {
+            self.menuLabel.textColor = .white
+            backgroundColor = UIColor.PlumPurple
+        }
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

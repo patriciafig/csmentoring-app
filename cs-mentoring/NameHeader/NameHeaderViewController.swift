@@ -10,8 +10,6 @@ import UIKit
  
 class NameHeaderViewController: UIViewController {
     
-    var username:String = ""
-    
     @IBOutlet private var userName: UILabel!
     @IBOutlet private var userType: UILabel!
     
