@@ -9,10 +9,10 @@
 import UIKit
 
 extension UIColor {
-    // Represents the SeaBlue #5AE1FC, with RGB values of (90, 255, 252
+    // Represents the SeaBlue
     static var SeaBlue: UIColor {
         get {
-            return UIColor(red: 90.0/255.0, green: 255.0/255.0, blue: 252.0/255.0, alpha:1)
+            return UIColor(red: 104.0/255.0, green: 230.0/255.0, blue: 253.0/255.0, alpha:1)
         }
     }
     

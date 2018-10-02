@@ -24,6 +24,7 @@ class SlideOutMenuTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
         let userTypeString = UserDefaults.standard.string(forKey: "userType") ?? "No type set"
         if userTypeString == "Student" {
             self.menuLabel.textColor = .white

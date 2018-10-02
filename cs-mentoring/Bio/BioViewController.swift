@@ -8,6 +8,9 @@
 
 import UIKit
 
+//PUT: https://csmentoring.herokuapp.com/api/Students/
+//PUT: https://csmentoring.herokuapp.com/api/Mentors/
+
 class BioViewController: UIViewController {
     
     @IBOutlet private var bioLabel: UILabel!

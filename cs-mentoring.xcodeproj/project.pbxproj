@@ -17,6 +17,8 @@
 		4D417DF0208D5B4E00B4E3FA /* cs_mentoring.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4D417DEE208D5B4E00B4E3FA /* cs_mentoring.xcdatamodeld */; };
 		4D417DF2208D5B4E00B4E3FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D417DF1208D5B4E00B4E3FA /* Assets.xcassets */; };
 		4D417DF5208D5B4E00B4E3FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D417DF3208D5B4E00B4E3FA /* LaunchScreen.storyboard */; };
+		4D4BE5672162810300431AB8 /* PostsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4BE5662162810300431AB8 /* PostsPageViewController.swift */; };
+		4D4BE5692162824000431AB8 /* NewsandPostsFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D4BE5682162824000431AB8 /* NewsandPostsFeed.storyboard */; };
 		4D61D78F213E30CE001438DA /* InterestsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61D78E213E30CE001438DA /* InterestsCollectionViewCell.swift */; };
 		4D61D797213F21C2001438DA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61D796213F21C2001438DA /* Extensions.swift */; };
 		4D78A3EF21439203007DD8A3 /* UserProfilePictureStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D78A3EE21439203007DD8A3 /* UserProfilePictureStoryboard.storyboard */; };
@@ -51,6 +53,8 @@
 		4D417DF1208D5B4E00B4E3FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D417DF4208D5B4E00B4E3FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D417DF6208D5B4E00B4E3FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D4BE5662162810300431AB8 /* PostsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsPageViewController.swift; sourceTree = "<group>"; };
+		4D4BE5682162824000431AB8 /* NewsandPostsFeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsandPostsFeed.storyboard; sourceTree = "<group>"; };
 		4D61D78E213E30CE001438DA /* InterestsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsCollectionViewCell.swift; sourceTree = "<group>"; };
 		4D61D796213F21C2001438DA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4D78A3EE21439203007DD8A3 /* UserProfilePictureStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfilePictureStoryboard.storyboard; sourceTree = "<group>"; };
@@ -114,6 +118,7 @@
 		4D417DE6208D5B4E00B4E3FA /* cs-mentoring */ = {
 			isa = PBXGroup;
 			children = (
+				4D4BE5652161D10900431AB8 /* News and Posts */,
 				4DE75D0D21461B440016DD35 /* SlideOutMenu */,
 				4D78A3ED2143911C007DD8A3 /* UseProfilePicture */,
 				4D78A3EA21408797007DD8A3 /* Style */,
@@ -133,6 +138,15 @@
 				4DD0C86F2159710800F7D5F9 /* HomeScreenNavigationController.swift */,
 			);
 			path = "cs-mentoring";
+			sourceTree = "<group>";
+		};
+		4D4BE5652161D10900431AB8 /* News and Posts */ = {
+			isa = PBXGroup;
+			children = (
+				4D4BE5662162810300431AB8 /* PostsPageViewController.swift */,
+				4D4BE5682162824000431AB8 /* NewsandPostsFeed.storyboard */,
+			);
+			path = "News and Posts";
 			sourceTree = "<group>";
 		};
 		4D78A3EA21408797007DD8A3 /* Style */ = {
@@ -273,6 +287,7 @@
 			files = (
 				4DEF73D7213A31E700A71184 /* SpaceMono-Regular.ttf in Resources */,
 				4DEF73D8213A31E700A71184 /* Karla-Bold.ttf in Resources */,
+				4D4BE5692162824000431AB8 /* NewsandPostsFeed.storyboard in Resources */,
 				4D417DF5208D5B4E00B4E3FA /* LaunchScreen.storyboard in Resources */,
 				4DEF73D9213A31E700A71184 /* SpaceMono-Bold.ttf in Resources */,
 				4D417DF2208D5B4E00B4E3FA /* Assets.xcassets in Resources */,
@@ -359,6 +374,7 @@
 				4D61D78F213E30CE001438DA /* InterestsCollectionViewCell.swift in Sources */,
 				4D410575212D197F00632D8F /* NameHeaderViewController.swift in Sources */,
 				4D417DE8208D5B4E00B4E3FA /* AppDelegate.swift in Sources */,
+				4D4BE5672162810300431AB8 /* PostsPageViewController.swift in Sources */,
 				4D78A3F72143AA07007DD8A3 /* UserProfilePictureCollectionViewCell.swift in Sources */,
 				4DEF73D0213A2B8600A71184 /* BioViewController.swift in Sources */,
 			);
