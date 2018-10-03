@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 //POST: https://csmentoring.herokuapp.com/api/posts
 
 class PostsPageViewController: UIPageViewController {
@@ -24,7 +23,8 @@ class PostsPageViewController: UIPageViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    
+    
     /*
     // MARK: - Navigation
 
