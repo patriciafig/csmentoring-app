@@ -54,11 +54,21 @@ class PostsPageViewController: UIPageViewController, UIPageViewControllerDelegat
                 self.newViewController(viewController: "sb2")]
     }()
     
-
+    var pageControl = UIPageControl()
+    func configurePageControl() {
+        pageControl = UIPageControl(frame: CGRect(x: 0, y: UIScreen.main.bounds.maxY - 50, width: UIScreen.main.bounds.width, height: 50))
+        self .pageControl.numberOfPages = orderOfViewControllers.count
+        self .pageControl.currentPage = 0
+        self .pageControl.pageIndicatorTintColor = UIColor.white
+        self .pageControl.pageIndicatorTintColor = UIColor.black
+        self .view.addSubview(pageControl)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.dataSource = self
+        configurePageControl()
+        
         if let firstViewController = orderOfViewControllers.first {
             setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
         }
