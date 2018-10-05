@@ -10,11 +10,59 @@ import UIKit
 
 //POST: https://csmentoring.herokuapp.com/api/posts
 
-class PostsPageViewController: UIPageViewController {
+class PostsPageViewController: UIPageViewController, UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+        guard let viewControllerIndex = orderOfViewControllers.index(of:viewController) else {
+            return nil
+        }
+        
+        let previousIndex = viewControllerIndex - 1
+        
+        //if user is on the first view controller and swipes left , loop to the last view controller
+        guard previousIndex >= 0 else{
+            return orderOfViewControllers.last
+        }
+        
+        return orderOfViewControllers[previousIndex]
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+        guard let viewControllerIndex = orderOfViewControllers.index(of:viewController) else{
+            return nil
+        }
+        
+        let nextIndex = viewControllerIndex + 1
+        let orderedViewControllersCount = orderOfViewControllers.count
+        
+        guard orderedViewControllersCount != nextIndex else {
+            return orderOfViewControllers.first
+        }
+        
+        guard orderedViewControllersCount > nextIndex else {
+            return nil
+        }
+        return orderOfViewControllers[nextIndex]
+    }
+    
+    
+    func newViewController(viewController: String) -> UIViewController{
+        return UIStoryboard(name: "NewsandPostsFeed", bundle: nil).instantiateViewController(withIdentifier: viewController )
+        }
+    
+    lazy var orderOfViewControllers:  [UIViewController] = {
+        return [self.newViewController(viewController: "sb1"),
+                self.newViewController(viewController: "sb2")]
+    }()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.dataSource = self
+        if let firstViewController = orderOfViewControllers.first {
+            setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
+        }
+        
         // Do any additional setup after loading the view.
     }
 
