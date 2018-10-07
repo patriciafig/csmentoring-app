@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--News And Posts Feed View Controller-->
         <scene sceneID="3b3-K4-Jgs">
             <objects>
-                <viewController id="eZ2-Ux-W8V" sceneMemberID="viewController">
+                <viewController id="eZ2-Ux-W8V" customClass="NewsAndPostsFeedViewController" customModule="cs_mentoring" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4sl-jL-DIM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,7 +60,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PXz-Yz-jxr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-999.20000000000005" y="-206.44677661169416"/>
+            <point key="canvasLocation" x="-1052" y="-207"/>
         </scene>
         <!--Posts Page View Controller-->
         <scene sceneID="1H4-69-dtb">
@@ -73,11 +73,11 @@
         <!--View Controller-->
         <scene sceneID="ngQ-eU-7Zv">
             <objects>
-                <viewController id="9lk-I1-Jko" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sb1" id="9lk-I1-Jko" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="sb1" id="kUE-bz-uaX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.62352941179999999" green="0.84313725490000002" blue="0.89019607840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.88235294119999996" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="AeT-mi-uvR"/>
                     </view>
                 </viewController>
@@ -88,11 +88,11 @@
         <!--View Controller-->
         <scene sceneID="AHo-WM-iJU">
             <objects>
-                <viewController id="fiw-Do-jgW" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="sb2" id="fiw-Do-jgW" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="sb2" id="T0c-Bi-cxK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.3921568627" green="0.3294117647" blue="0.69477330534520543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.3921568627" green="0.3294117647" blue="0.96470588239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="gle-ZG-nNm"/>
                     </view>
                 </viewController>

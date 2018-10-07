@@ -19,6 +19,8 @@
 		4D417DF5208D5B4E00B4E3FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D417DF3208D5B4E00B4E3FA /* LaunchScreen.storyboard */; };
 		4D4BE5672162810300431AB8 /* PostsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D4BE5662162810300431AB8 /* PostsPageViewController.swift */; };
 		4D4BE5692162824000431AB8 /* NewsandPostsFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D4BE5682162824000431AB8 /* NewsandPostsFeed.storyboard */; };
+		4D5341362169A63500F5276E /* NewsAndPostsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5341352169A63500F5276E /* NewsAndPostsFeedViewController.swift */; };
+		4D5341382169A9A600F5276E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5341372169A9A600F5276E /* FirstViewController.swift */; };
 		4D61D78F213E30CE001438DA /* InterestsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61D78E213E30CE001438DA /* InterestsCollectionViewCell.swift */; };
 		4D61D797213F21C2001438DA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61D796213F21C2001438DA /* Extensions.swift */; };
 		4D78A3EF21439203007DD8A3 /* UserProfilePictureStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D78A3EE21439203007DD8A3 /* UserProfilePictureStoryboard.storyboard */; };
@@ -55,6 +57,8 @@
 		4D417DF6208D5B4E00B4E3FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D4BE5662162810300431AB8 /* PostsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsPageViewController.swift; sourceTree = "<group>"; };
 		4D4BE5682162824000431AB8 /* NewsandPostsFeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsandPostsFeed.storyboard; sourceTree = "<group>"; };
+		4D5341352169A63500F5276E /* NewsAndPostsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAndPostsFeedViewController.swift; sourceTree = "<group>"; };
+		4D5341372169A9A600F5276E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		4D61D78E213E30CE001438DA /* InterestsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsCollectionViewCell.swift; sourceTree = "<group>"; };
 		4D61D796213F21C2001438DA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4D78A3EE21439203007DD8A3 /* UserProfilePictureStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfilePictureStoryboard.storyboard; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 				0AD47C4920904C02000F3319 /* LoginViewController.swift */,
 				4D410570212D112400632D8F /* HomeScreenViewController.swift */,
 				4DD0C86F2159710800F7D5F9 /* HomeScreenNavigationController.swift */,
+				4D5341372169A9A600F5276E /* FirstViewController.swift */,
 			);
 			path = "cs-mentoring";
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 			children = (
 				4D4BE5662162810300431AB8 /* PostsPageViewController.swift */,
 				4D4BE5682162824000431AB8 /* NewsandPostsFeed.storyboard */,
+				4D5341352169A63500F5276E /* NewsAndPostsFeedViewController.swift */,
 			);
 			path = "News and Posts";
 			sourceTree = "<group>";
@@ -366,9 +372,11 @@
 				4DD0C8702159710800F7D5F9 /* HomeScreenNavigationController.swift in Sources */,
 				4D78A3F32143987B007DD8A3 /* UserProfilePictureViewController.swift in Sources */,
 				4D61D797213F21C2001438DA /* Extensions.swift in Sources */,
+				4D5341362169A63500F5276E /* NewsAndPostsFeedViewController.swift in Sources */,
 				4DEF73DE213A32DD00A71184 /* InterestsViewController.swift in Sources */,
 				4D410571212D112400632D8F /* HomeScreenViewController.swift in Sources */,
 				0AAE8AFF208FA68C007FE373 /* SignUpViewController.swift in Sources */,
+				4D5341382169A9A600F5276E /* FirstViewController.swift in Sources */,
 				4DD0C86E215969DC00F7D5F9 /* SlideOutMenuTableViewCell.swift in Sources */,
 				0AD47C4A20904C02000F3319 /* LoginViewController.swift in Sources */,
 				4D61D78F213E30CE001438DA /* InterestsCollectionViewCell.swift in Sources */,

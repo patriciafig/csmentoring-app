@@ -32,7 +32,7 @@ class SignUpViewController: UIViewController {
     selectAnOptionButton.layer.sublayerTransform = CATransform3DMakeTranslation(20, 0, 0)
     
     navigationController?.title = "Create an Account"
-    
+
     let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
     view.addGestureRecognizer(tap)
     
@@ -45,7 +45,7 @@ class SignUpViewController: UIViewController {
   
   override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
-    navigationController?.navigationBar.isHidden = false;
+    navigationController?.setNavigationBarHidden(false, animated: true)
   }
   
   @IBAction func handleSelectAnOption(_ sender: Any) {

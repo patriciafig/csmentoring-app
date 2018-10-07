@@ -9,8 +9,10 @@
 import UIKit
 import MMDrawerController
 
-class HomeScreenNavigationController: MMDrawerController {
-    var  centerContainer : MMDrawerController?
+class HomeScreenNavigationController: MMDrawerController, DrawerDelegate {
+    weak var drawerDelegate: DrawerDelegate!
+    var centerContainer : MMDrawerController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //get the right storyboard
@@ -18,6 +20,7 @@ class HomeScreenNavigationController: MMDrawerController {
         let slideOutMenuStoryBoard:UIStoryboard = UIStoryboard(name: "SlideOutMenu", bundle: nil)
         //set the left view controller as the slide menu
         let leftViewController  =   slideOutMenuStoryBoard.instantiateViewController(withIdentifier: "SlideOutMenuViewController") as! SlideOutMenuViewController
+        leftViewController.drawerDelegate = self
         
         //navegation
         let leftSideNav = leftViewController
@@ -38,6 +41,10 @@ class HomeScreenNavigationController: MMDrawerController {
     }
     
     func toggleDrawer(){
-        centerContainer?.toggle(.left, animated: true, completion: nil)    }
+        centerContainer?.toggle(.left, animated: true, completion: nil)
+    }
     
+    func navigate(to item: SlideOutMenuItems?) {
+        drawerDelegate.navigate(to: item)
+    }
 }

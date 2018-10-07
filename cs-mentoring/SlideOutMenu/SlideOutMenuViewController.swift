@@ -20,10 +20,16 @@ struct SlideOutMenuItems {
     }
 }
 
+protocol DrawerDelegate: class {
+    func navigate(to item: SlideOutMenuItems?)
+}
+
 class SlideOutMenuViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
     var menuItems = [SlideOutMenuItems]()
     @IBOutlet weak var tableView: UITableView!
     let cellId = "menuCell"
+    
+    weak var drawerDelegate: DrawerDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +43,17 @@ class SlideOutMenuViewController: UIViewController,UITableViewDataSource,UITable
         
         }
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        if let nameHeaderViewController = segue.destination as? NameHeaderViewController {
+            nameHeaderViewController.hidesEditButton = true
+            nameHeaderViewController.enableProfileButton = true
+            nameHeaderViewController.drawerDelegate = drawerDelegate
+            nameHeaderViewController.drawerController = drawerDelegate as? HomeScreenNavigationController
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -55,6 +72,12 @@ class SlideOutMenuViewController: UIViewController,UITableViewDataSource,UITable
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
         
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            drawerDelegate.navigate(to: menuItems[indexPath.row])
+        }
     }
     
     

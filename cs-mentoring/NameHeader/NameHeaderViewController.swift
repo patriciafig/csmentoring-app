@@ -8,13 +8,26 @@
 
 import UIKit
  
-class NameHeaderViewController: UIViewController {
+class NameHeaderViewController: UIViewController, HomeScreenDelegate {
+    var drawerController: HomeScreenNavigationController?
+    var drawerDelegate: DrawerDelegate!
     
     @IBOutlet private var userName: UILabel!
     @IBOutlet private var userType: UILabel!
+    @IBOutlet private var editButton: UIButton!
+    
+    var hidesEditButton: Bool = false
+    var enableProfileButton: Bool = false
     
     @IBAction private func editButtonTapped(_ sender: UIButton) {
         // TODO: Edit Profile Button
+    }
+    
+    @IBAction func profileButtonTapped(_ sender: UIButton) {
+        if enableProfileButton {
+            drawerController?.toggleDrawer()
+            drawerDelegate.navigate(to: nil)
+        }
     }
     
     override func viewDidLoad() {
@@ -38,5 +51,11 @@ class NameHeaderViewController: UIViewController {
             userType.textColor = .white
             view.backgroundColor = UIColor.PlumPurple
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        editButton.isHidden = hidesEditButton
     }
 }

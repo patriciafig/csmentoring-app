@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gIp-Ie-RPU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gIp-Ie-RPU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -40,13 +40,6 @@
                                             <action selector="editButtonTapped:" destination="gIp-Ie-RPU" eventType="touchUpInside" id="aHy-KI-wwM"/>
                                         </connections>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="sJD-As-d14">
-                                        <rect key="frame" x="20" y="32" width="40" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="40" id="Lsg-DA-BMr"/>
-                                            <constraint firstAttribute="height" constant="40" id="QVU-UH-7JA"/>
-                                        </constraints>
-                                    </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vJt-KC-oZc">
                                         <rect key="frame" x="80" y="32" width="231" height="40"/>
                                         <subviews>
@@ -67,21 +60,32 @@
                                             <constraint firstAttribute="height" constant="40" id="s8b-Us-0sL"/>
                                         </constraints>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2pL-eE-HVt">
+                                        <rect key="frame" x="20" y="32" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="Ari-fS-IBL"/>
+                                            <constraint firstAttribute="height" constant="40" id="pWe-v8-8ME"/>
+                                        </constraints>
+                                        <state key="normal" image="profileIcon"/>
+                                        <connections>
+                                            <action selector="profileButtonTapped:" destination="gIp-Ie-RPU" eventType="touchUpInside" id="IZn-gh-UGd"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="sJD-As-d14" firstAttribute="leading" secondItem="FvE-so-E5K" secondAttribute="leading" constant="20" id="DDG-7N-vIt"/>
                                     <constraint firstItem="Pal-J4-RU3" firstAttribute="leading" secondItem="vJt-KC-oZc" secondAttribute="trailing" constant="8" id="DfV-be-jV4"/>
                                     <constraint firstAttribute="trailing" secondItem="Pal-J4-RU3" secondAttribute="trailing" constant="16" id="Faz-Em-ifL"/>
                                     <constraint firstItem="vJt-KC-oZc" firstAttribute="centerY" secondItem="FvE-so-E5K" secondAttribute="centerY" id="Hpe-89-y8W"/>
                                     <constraint firstAttribute="height" constant="104" id="RW2-XD-PCS"/>
+                                    <constraint firstItem="vJt-KC-oZc" firstAttribute="leading" secondItem="2pL-eE-HVt" secondAttribute="trailing" constant="20" id="Spf-2c-EIv"/>
                                     <constraint firstItem="Pal-J4-RU3" firstAttribute="centerY" secondItem="FvE-so-E5K" secondAttribute="centerY" id="lqE-ET-KAH"/>
-                                    <constraint firstItem="vJt-KC-oZc" firstAttribute="leading" secondItem="sJD-As-d14" secondAttribute="trailing" constant="20" id="vW8-nV-jCm"/>
-                                    <constraint firstItem="sJD-As-d14" firstAttribute="centerY" secondItem="FvE-so-E5K" secondAttribute="centerY" id="ycZ-Du-4jK"/>
+                                    <constraint firstItem="2pL-eE-HVt" firstAttribute="leading" secondItem="FvE-so-E5K" secondAttribute="leading" constant="20" id="oak-Zn-7Jt"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.94509803921568625" green="0.97647058823529409" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="2pL-eE-HVt" firstAttribute="centerY" secondItem="tyP-Zg-MtV" secondAttribute="centerY" id="7WW-9U-mcg"/>
                             <constraint firstItem="tyP-Zg-MtV" firstAttribute="trailing" secondItem="FvE-so-E5K" secondAttribute="trailing" id="cuw-8T-Lkh"/>
                             <constraint firstItem="FvE-so-E5K" firstAttribute="leading" secondItem="tyP-Zg-MtV" secondAttribute="leading" id="fK4-f2-oOE"/>
                             <constraint firstAttribute="bottom" secondItem="FvE-so-E5K" secondAttribute="bottom" id="fq3-L4-KJ3"/>
@@ -91,6 +95,7 @@
                     </view>
                     <size key="freeformSize" width="375" height="104"/>
                     <connections>
+                        <outlet property="editButton" destination="Pal-J4-RU3" id="s8s-sa-obc"/>
                         <outlet property="userName" destination="8Of-fL-7Q1" id="r97-EC-XnH"/>
                         <outlet property="userType" destination="oK6-WJ-jTW" id="OHh-eU-Kgo"/>
                     </connections>
