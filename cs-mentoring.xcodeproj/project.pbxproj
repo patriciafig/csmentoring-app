@@ -21,6 +21,8 @@
 		4D4BE5692162824000431AB8 /* NewsandPostsFeed.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D4BE5682162824000431AB8 /* NewsandPostsFeed.storyboard */; };
 		4D5341362169A63500F5276E /* NewsAndPostsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5341352169A63500F5276E /* NewsAndPostsFeedViewController.swift */; };
 		4D5341382169A9A600F5276E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5341372169A9A600F5276E /* FirstViewController.swift */; };
+		4D5BC0902173EBAA00F5F7BB /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5BC08F2173EBAA00F5F7BB /* NewsViewController.swift */; };
+		4D5BC0922173EBC700F5F7BB /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5BC0912173EBC700F5F7BB /* NewsCollectionViewCell.swift */; };
 		4D61D78F213E30CE001438DA /* InterestsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61D78E213E30CE001438DA /* InterestsCollectionViewCell.swift */; };
 		4D61D797213F21C2001438DA /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D61D796213F21C2001438DA /* Extensions.swift */; };
 		4D78A3EF21439203007DD8A3 /* UserProfilePictureStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D78A3EE21439203007DD8A3 /* UserProfilePictureStoryboard.storyboard */; };
@@ -59,6 +61,8 @@
 		4D4BE5682162824000431AB8 /* NewsandPostsFeed.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsandPostsFeed.storyboard; sourceTree = "<group>"; };
 		4D5341352169A63500F5276E /* NewsAndPostsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAndPostsFeedViewController.swift; sourceTree = "<group>"; };
 		4D5341372169A9A600F5276E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		4D5BC08F2173EBAA00F5F7BB /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
+		4D5BC0912173EBC700F5F7BB /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		4D61D78E213E30CE001438DA /* InterestsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsCollectionViewCell.swift; sourceTree = "<group>"; };
 		4D61D796213F21C2001438DA /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4D78A3EE21439203007DD8A3 /* UserProfilePictureStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfilePictureStoryboard.storyboard; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				4D4BE5652161D10900431AB8 /* News and Posts */,
+				4D62ED4B21700D1100B6E9A6 /* Schedule Meeting */,
 				4DE75D0D21461B440016DD35 /* SlideOutMenu */,
 				4D78A3ED2143911C007DD8A3 /* UseProfilePicture */,
 				4D78A3EA21408797007DD8A3 /* Style */,
@@ -151,8 +156,17 @@
 				4D4BE5662162810300431AB8 /* PostsPageViewController.swift */,
 				4D4BE5682162824000431AB8 /* NewsandPostsFeed.storyboard */,
 				4D5341352169A63500F5276E /* NewsAndPostsFeedViewController.swift */,
+				4D5BC08F2173EBAA00F5F7BB /* NewsViewController.swift */,
+				4D5BC0912173EBC700F5F7BB /* NewsCollectionViewCell.swift */,
 			);
 			path = "News and Posts";
+			sourceTree = "<group>";
+		};
+		4D62ED4B21700D1100B6E9A6 /* Schedule Meeting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Schedule Meeting";
 			sourceTree = "<group>";
 		};
 		4D78A3EA21408797007DD8A3 /* Style */ = {
@@ -374,6 +388,7 @@
 				4D61D797213F21C2001438DA /* Extensions.swift in Sources */,
 				4D5341362169A63500F5276E /* NewsAndPostsFeedViewController.swift in Sources */,
 				4DEF73DE213A32DD00A71184 /* InterestsViewController.swift in Sources */,
+				4D5BC0902173EBAA00F5F7BB /* NewsViewController.swift in Sources */,
 				4D410571212D112400632D8F /* HomeScreenViewController.swift in Sources */,
 				0AAE8AFF208FA68C007FE373 /* SignUpViewController.swift in Sources */,
 				4D5341382169A9A600F5276E /* FirstViewController.swift in Sources */,
@@ -385,6 +400,7 @@
 				4D4BE5672162810300431AB8 /* PostsPageViewController.swift in Sources */,
 				4D78A3F72143AA07007DD8A3 /* UserProfilePictureCollectionViewCell.swift in Sources */,
 				4DEF73D0213A2B8600A71184 /* BioViewController.swift in Sources */,
+				4D5BC0922173EBC700F5F7BB /* NewsCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

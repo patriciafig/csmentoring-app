@@ -26,6 +26,14 @@ class PostsPageViewController: UIPageViewController, UIPageViewControllerDelegat
         return orderOfViewControllers[previousIndex]
     }
     
+    func presentationCount(for pageViewController: UIPageViewController) -> Int {
+        return orderOfViewControllers.count
+    }
+    
+    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
+        return 0
+    }
+  
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderOfViewControllers.index(of:viewController) else{
             return nil
@@ -54,41 +62,31 @@ class PostsPageViewController: UIPageViewController, UIPageViewControllerDelegat
                 self.newViewController(viewController: "sb2")]
     }()
     
-    var pageControl = UIPageControl()
     func configurePageControl() {
-        pageControl = UIPageControl(frame: CGRect(x: 0, y: UIScreen.main.bounds.maxY - 50, width: UIScreen.main.bounds.width, height: 50))
-        self .pageControl.numberOfPages = orderOfViewControllers.count
-        self .pageControl.currentPage = 0
-        self .pageControl.pageIndicatorTintColor = UIColor.white
-        self .pageControl.pageIndicatorTintColor = UIColor.black
-        self .view.addSubview(pageControl)
+        let pageControl = UIPageControl(frame: CGRect(x: 0, y: 338, width: UIScreen.main.bounds.width, height: 50))
+        pageControl.numberOfPages = orderOfViewControllers.count
+        pageControl.currentPage = 0
+        view.addSubview(pageControl)
+        
+        pageControl.translatesAutoresizingMaskIntoConstraints = false
+        pageControl.topAnchor.constraint(equalTo: view.bottomAnchor, constant: 50).isActive = true
+        pageControl.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50).isActive = true
+        pageControl.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 50).isActive = true
+        pageControl.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.delegate = self
         self.dataSource = self
-        configurePageControl()
+        //configurePageControl()
         
         if let firstViewController = orderOfViewControllers.first {
             setViewControllers([firstViewController], direction: .forward, animated: true, completion: nil)
         }
         
-        // Do any additional setup after loading the view.
+        let appearance = UIPageControl.appearance(whenContainedInInstancesOf: [UIPageViewController.self])
+        appearance.pageIndicatorTintColor = UIColor(red: 38.0/255.0, green: 153.0/255.0, blue: 251.0/255.0, alpha: 0.25)
+        appearance.currentPageIndicatorTintColor = .SkyBlue
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

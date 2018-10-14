@@ -36,7 +36,7 @@ class SlideOutMenuViewController: UIViewController,UITableViewDataSource,UITable
         tableView.separatorStyle = .none
         // add items to list
         
-        for i in 0...20{
+        for i in 0...5{
             menuItems.append(SlideOutMenuItems(menuIcon: #imageLiteral(resourceName: "Feedicon"), menuLabel: "NEWS \(i)"))
             
             //TODO: this is where we add the items for the menu
