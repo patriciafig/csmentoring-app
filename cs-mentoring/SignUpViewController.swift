@@ -109,7 +109,7 @@ class SignUpViewController: UIViewController {
             let responseJson = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String: Any]
             if (responseJson["state"] as! String == "success") {
               let user = responseJson["user"] as! NSDictionary
-            //save username and userType  into UserDefaults
+            //save username and userType into UserDefaults
              UserDefaults.standard.set(user.value(forKey: "username") as! String, forKey: "userFullName")
              UserDefaults.standard.set(user.value(forKey: "userType") as! String, forKey: "userType")
                 

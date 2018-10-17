@@ -167,6 +167,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="JkP-PP-dCX"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="17"/>
                                 <state key="normal" title="LOGIN WITH FACEBOOK"/>
                             </button>
                         </subviews>
@@ -342,6 +343,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="N4r-fB-SQR"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" name="Karla-Bold" family="Karla" pointSize="17"/>
                                                 <state key="normal" title="CONTINUE">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0AAE8AFF208FA68C007FE373 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAE8AFE208FA68C007FE373 /* SignUpViewController.swift */; };
 		0AD47C4A20904C02000F3319 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD47C4920904C02000F3319 /* LoginViewController.swift */; };
+		4D1FE2CE2177019300C64A9E /* EditProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D1FE2CD2177019300C64A9E /* EditProfile.storyboard */; };
 		4D410571212D112400632D8F /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D410570212D112400632D8F /* HomeScreenViewController.swift */; };
 		4D410573212D15CC00632D8F /* NameHeader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D410572212D15CC00632D8F /* NameHeader.storyboard */; };
 		4D410575212D197F00632D8F /* NameHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D410574212D197F00632D8F /* NameHeaderViewController.swift */; };
@@ -47,6 +48,7 @@
 		0AAE8AFE208FA68C007FE373 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0AD47C4920904C02000F3319 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1E7F378B23B921710D15FE1D /* Pods-cs-mentoring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cs-mentoring.release.xcconfig"; path = "Pods/Target Support Files/Pods-cs-mentoring/Pods-cs-mentoring.release.xcconfig"; sourceTree = "<group>"; };
+		4D1FE2CD2177019300C64A9E /* EditProfile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EditProfile.storyboard; sourceTree = "<group>"; };
 		4D410570212D112400632D8F /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		4D410572212D15CC00632D8F /* NameHeader.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NameHeader.storyboard; sourceTree = "<group>"; };
 		4D410574212D197F00632D8F /* NameHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameHeaderViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4D1FE2CC2177011D00C64A9E /* Edit Profile  */ = {
+			isa = PBXGroup;
+			children = (
+				4D1FE2CD2177019300C64A9E /* EditProfile.storyboard */,
+			);
+			path = "Edit Profile ";
+			sourceTree = "<group>";
+		};
 		4D417DDB208D5B4E00B4E3FA = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +136,7 @@
 		4D417DE6208D5B4E00B4E3FA /* cs-mentoring */ = {
 			isa = PBXGroup;
 			children = (
+				4D1FE2CC2177011D00C64A9E /* Edit Profile  */,
 				4D4BE5652161D10900431AB8 /* News and Posts */,
 				4D62ED4B21700D1100B6E9A6 /* Schedule Meeting */,
 				4DE75D0D21461B440016DD35 /* SlideOutMenu */,
@@ -313,6 +324,7 @@
 				4D417DF2208D5B4E00B4E3FA /* Assets.xcassets in Resources */,
 				4DE75D0F21461B6B0016DD35 /* SlideOutMenu.storyboard in Resources */,
 				4DEF73CE213A2B7900A71184 /* Bio.storyboard in Resources */,
+				4D1FE2CE2177019300C64A9E /* EditProfile.storyboard in Resources */,
 				4DEF73DC213A32D000A71184 /* Interests.storyboard in Resources */,
 				4DEF73D6213A31E700A71184 /* Karla-Regular.ttf in Resources */,
 				4D78A3EF21439203007DD8A3 /* UserProfilePictureStoryboard.storyboard in Resources */,

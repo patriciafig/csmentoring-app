@@ -25,7 +25,9 @@ protocol DrawerDelegate: class {
 }
 
 class SlideOutMenuViewController: UIViewController,UITableViewDataSource,UITableViewDelegate {
+    //var menuItems = ["NewsFeed", "Files", "Notifications", "Settings "]
     var menuItems = [SlideOutMenuItems]()
+    
     @IBOutlet weak var tableView: UITableView!
     let cellId = "menuCell"
     
@@ -36,15 +38,12 @@ class SlideOutMenuViewController: UIViewController,UITableViewDataSource,UITable
         tableView.separatorStyle = .none
         // add items to list
         
-        for i in 0...5{
+       for i in 0...4 {
             menuItems.append(SlideOutMenuItems(menuIcon: #imageLiteral(resourceName: "Feedicon"), menuLabel: "NEWS \(i)"))
-            
             //TODO: this is where we add the items for the menu
-        
         }
-        
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
