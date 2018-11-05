@@ -10,6 +10,14 @@ import UIKit
 
 class NewsCollectionViewCell: UICollectionViewCell {
     
+    var newsFeed : NewsFeed?{
+        didSet{
+            guard let data = newsFeed else {return}
+            descriptionLabel.text = data.description
+            timestampLabel.text = data.postTime
+        }
+    }
+    
     @IBOutlet private(set) var imageView: UIImageView! {
         didSet {
             imageView.backgroundColor = .SkyBlue

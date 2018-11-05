@@ -33,7 +33,7 @@ class PostsPageViewController: UIPageViewController, UIPageViewControllerDelegat
     func presentationIndex(for pageViewController: UIPageViewController) -> Int {
         return 0
     }
-  
+    
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
         guard let viewControllerIndex = orderOfViewControllers.index(of:viewController) else{
             return nil
@@ -55,7 +55,7 @@ class PostsPageViewController: UIPageViewController, UIPageViewControllerDelegat
     
     func newViewController(viewController: String) -> UIViewController{
         return UIStoryboard(name: "NewsandPostsFeed", bundle: nil).instantiateViewController(withIdentifier: viewController )
-        }
+    }
     
     lazy var orderOfViewControllers:  [UIViewController] = {
         return [self.newViewController(viewController: "sb1"),

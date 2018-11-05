@@ -11,7 +11,18 @@ import UIKit
 //PUT: https://csmentoring.herokuapp.com/api/Students/
 //PUT: https://csmentoring.herokuapp.com/api/Mentors/
 
-class BioViewController: UIViewController {
+
+protocol BioDelegate{
+    func didGetBio(bio : String)
+}
+
+class BioViewController: UIViewController, BioDelegate {
+    
+    
+    func didGetBio(bio: String) {
+        print("bio")
+        bioLabel.text = bio
+    }
     
     @IBOutlet private var bioLabel: UILabel!
     
@@ -19,5 +30,18 @@ class BioViewController: UIViewController {
         super.viewDidLoad()
         
         bioLabel.textColor =  UIColor(red: 38 / 255, green: 153 / 255 , blue: 251 / 255, alpha: 1)
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        guard let homeController = self.parent else{
+            return
+        }
+        // presented by parent view controller
+        if homeController.isKind(of: HomeScreenViewController.self){
+            // do something
+            let vc = homeController as! HomeScreenViewController
+            vc.bioDelegate = self
+        }
     }
 }

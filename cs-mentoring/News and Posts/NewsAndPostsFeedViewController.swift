@@ -23,12 +23,15 @@ class NewsAndPostsFeedViewController: UIViewController, HomeScreenDelegate, News
     @IBOutlet private var newsFeedHeight: NSLayoutConstraint!
     @IBOutlet private var scrollView: UIScrollView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.title = "News and Posts"
         navigationItem.hidesBackButton = true
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "Hamburgericon"), style: .plain, target: self, action: #selector(openDrawer))
+        
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -54,4 +57,5 @@ class NewsAndPostsFeedViewController: UIViewController, HomeScreenDelegate, News
         let scrollViewHeight = contentSize.height + postsHeight.constant + topConstraint.constant + middleConstraint.constant + 16
         scrollView.contentSize = CGSize(width: view.bounds.width, height: scrollViewHeight)
     }
+    
 }

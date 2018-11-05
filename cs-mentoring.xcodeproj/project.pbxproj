@@ -41,6 +41,8 @@
 		4DEF73D9213A31E700A71184 /* SpaceMono-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4DEF73D5213A31E700A71184 /* SpaceMono-Bold.ttf */; };
 		4DEF73DC213A32D000A71184 /* Interests.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DEF73DB213A32D000A71184 /* Interests.storyboard */; };
 		4DEF73DE213A32DD00A71184 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DEF73DD213A32DD00A71184 /* InterestsViewController.swift */; };
+		4DFF850E2187AE0C000AA427 /* APIendpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF850D2187AE0C000AA427 /* APIendpoints.swift */; };
+		4DFF85102188C486000AA427 /* NewsFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFF850F2188C486000AA427 /* NewsFeed.swift */; };
 		ED66C3497C26CEAE844E4CC4 /* Pods_cs_mentoring.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1A4AC3D89E4599613E6DB78 /* Pods_cs_mentoring.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +84,8 @@
 		4DEF73D5213A31E700A71184 /* SpaceMono-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceMono-Bold.ttf"; sourceTree = "<group>"; };
 		4DEF73DB213A32D000A71184 /* Interests.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Interests.storyboard; sourceTree = "<group>"; };
 		4DEF73DD213A32DD00A71184 /* InterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
+		4DFF850D2187AE0C000AA427 /* APIendpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIendpoints.swift; sourceTree = "<group>"; };
+		4DFF850F2188C486000AA427 /* NewsFeed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeed.swift; sourceTree = "<group>"; };
 		A1A4AC3D89E4599613E6DB78 /* Pods_cs_mentoring.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_cs_mentoring.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D076CC044481A878C4EE471D /* Pods-cs-mentoring.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cs-mentoring.debug.xcconfig"; path = "Pods/Target Support Files/Pods-cs-mentoring/Pods-cs-mentoring.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -157,6 +161,7 @@
 				4D410570212D112400632D8F /* HomeScreenViewController.swift */,
 				4DD0C86F2159710800F7D5F9 /* HomeScreenNavigationController.swift */,
 				4D5341372169A9A600F5276E /* FirstViewController.swift */,
+				4DFF850D2187AE0C000AA427 /* APIendpoints.swift */,
 			);
 			path = "cs-mentoring";
 			sourceTree = "<group>";
@@ -169,6 +174,7 @@
 				4D5341352169A63500F5276E /* NewsAndPostsFeedViewController.swift */,
 				4D5BC08F2173EBAA00F5F7BB /* NewsViewController.swift */,
 				4D5BC0912173EBC700F5F7BB /* NewsCollectionViewCell.swift */,
+				4DFF850F2188C486000AA427 /* NewsFeed.swift */,
 			);
 			path = "News and Posts";
 			sourceTree = "<group>";
@@ -361,22 +367,26 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-cs-mentoring/Pods-cs-mentoring-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/MMDrawerController/MMDrawerController.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMDrawerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -397,11 +407,13 @@
 				4D417DF0208D5B4E00B4E3FA /* cs_mentoring.xcdatamodeld in Sources */,
 				4DD0C8702159710800F7D5F9 /* HomeScreenNavigationController.swift in Sources */,
 				4D78A3F32143987B007DD8A3 /* UserProfilePictureViewController.swift in Sources */,
+				4DFF85102188C486000AA427 /* NewsFeed.swift in Sources */,
 				4D61D797213F21C2001438DA /* Extensions.swift in Sources */,
 				4D5341362169A63500F5276E /* NewsAndPostsFeedViewController.swift in Sources */,
 				4DEF73DE213A32DD00A71184 /* InterestsViewController.swift in Sources */,
 				4D5BC0902173EBAA00F5F7BB /* NewsViewController.swift in Sources */,
 				4D410571212D112400632D8F /* HomeScreenViewController.swift in Sources */,
+				4DFF850E2187AE0C000AA427 /* APIendpoints.swift in Sources */,
 				0AAE8AFF208FA68C007FE373 /* SignUpViewController.swift in Sources */,
 				4D5341382169A9A600F5276E /* FirstViewController.swift in Sources */,
 				4DD0C86E215969DC00F7D5F9 /* SlideOutMenuTableViewCell.swift in Sources */,

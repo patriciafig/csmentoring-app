@@ -14,5 +14,7 @@ pod 'Firebase/Storage'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
 pod 'JSQMessagesViewController'
+pod 'Alamofire', '~> 4.7.2'
+pod 'SwiftyJSON', '~> 4.0'
 
 end
