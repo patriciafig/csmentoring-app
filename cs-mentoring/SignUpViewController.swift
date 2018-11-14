@@ -110,7 +110,6 @@ class SignUpViewController: UIViewController {
                             //save username and userType into UserDefaults
                             UserDefaults.standard.set(user.value(forKey: "username") as! String, forKey: "userFullName")
                             UserDefaults.standard.set(user.value(forKey: "userType") as! String, forKey: "userType")
-                            
                             self.openProfile()
                         } else {
                             self.showAlert(title: "Success", message: responseJson.description)

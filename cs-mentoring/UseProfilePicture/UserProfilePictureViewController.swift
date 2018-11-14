@@ -15,9 +15,6 @@ protocol UserProfilePictureDelegate {
 class UserProfilePictureViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     @IBOutlet private var collectionView: UICollectionView!
     @IBOutlet private var headerLabel: UILabel!
-    
-    // private let userProfilePicture = Array(repeating: UIImage(named: "UserIcon"),     count: 10) + [UIImage(named:"circleicon")]
-    
     private var names = [String]()
     
     override func viewDidLoad() {

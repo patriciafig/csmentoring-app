@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lgX-cn-2vE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lgX-cn-2vE">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="Karla-Bold.ttf">
             <string>Karla-Bold</string>
+        </array>
+        <array key="Karla-Regular.ttf">
+            <string>Karla-Regular</string>
         </array>
     </customFonts>
     <scenes>
@@ -33,28 +36,43 @@
                                 <rect key="frame" x="0.0" y="36.5" width="375" height="89.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NEO-K9-IeR">
-                                    <size key="itemSize" width="40" height="40"/>
+                                    <size key="itemSize" width="60" height="60"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="32" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UserProfilePictureCollectionViewCell" id="lX1-9m-eIQ" customClass="UserProfilePictureCollectionViewCell" customModule="cs_mentoring" customModuleProvider="target">
-                                        <rect key="frame" x="32" y="25" width="40" height="40"/>
+                                        <rect key="frame" x="32" y="15" width="60" height="60"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UserIcon" translatesAutoresizingMaskIntoConstraints="NO" id="8wk-Go-TOB">
-                                                    <rect key="frame" x="0.0" y="-0.5" width="40" height="40"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UserIcon" translatesAutoresizingMaskIntoConstraints="NO" id="8wk-Go-TOB">
+                                                    <rect key="frame" x="10" y="0.0" width="40" height="40"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTC-n8-otI">
+                                                    <rect key="frame" x="0.0" y="40" width="60" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Karla-Regular" family="Karla" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
-                                        <size key="customSize" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstItem="eTC-n8-otI" firstAttribute="top" secondItem="8wk-Go-TOB" secondAttribute="bottom" id="B4Q-TY-VAr"/>
+                                            <constraint firstAttribute="trailing" secondItem="8wk-Go-TOB" secondAttribute="trailing" constant="10" id="EWk-mW-OFm"/>
+                                            <constraint firstAttribute="bottom" secondItem="eTC-n8-otI" secondAttribute="bottom" id="Gmd-GT-TJ6"/>
+                                            <constraint firstItem="8wk-Go-TOB" firstAttribute="top" secondItem="lX1-9m-eIQ" secondAttribute="top" id="R5e-As-uyr"/>
+                                            <constraint firstAttribute="trailing" secondItem="eTC-n8-otI" secondAttribute="trailing" id="fhV-A8-Ydk"/>
+                                            <constraint firstItem="8wk-Go-TOB" firstAttribute="leading" secondItem="lX1-9m-eIQ" secondAttribute="leading" constant="10" id="igU-Ma-Sso"/>
+                                            <constraint firstItem="eTC-n8-otI" firstAttribute="leading" secondItem="lX1-9m-eIQ" secondAttribute="leading" id="vae-NM-c31"/>
+                                        </constraints>
+                                        <size key="customSize" width="60" height="60"/>
                                         <connections>
                                             <outlet property="profilePic" destination="8wk-Go-TOB" id="xcs-LA-N2k"/>
+                                            <outlet property="userNameLabel" destination="eTC-n8-otI" id="4xf-PI-66E"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

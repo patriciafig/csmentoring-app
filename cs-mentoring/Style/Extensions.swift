@@ -16,6 +16,12 @@ extension UIColor {
         }
     }
     
+    static var BrightBlue: UIColor {
+        get {
+            return UIColor(red: 90.0/255.0, green: 225.0/255.0, blue: 253.0/255.0, alpha:1)
+        }
+    }
+    
     // Represents the color CloudBlue #F1F9FF
     static var CloudBlue: UIColor {
         get{

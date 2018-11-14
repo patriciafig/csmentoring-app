@@ -42,6 +42,19 @@ class SlideOutMenuViewController: UIViewController,UITableViewDataSource,UITable
             menuItems.append(SlideOutMenuItems(menuIcon: #imageLiteral(resourceName: "Feedicon"), menuLabel: "NEWS \(i)"))
             //TODO: this is where we add the items for the menu
         }
+        
+        let userTypeString = UserDefaults.standard.string(forKey: "userType")
+        
+        if userTypeString == "Student" {
+            view.backgroundColor = .CloudBlue // top
+            tableView.backgroundColor = .BrightBlue // bottom
+        } else if userTypeString == "Mentor" {
+            view.backgroundColor = .RoyalPurple // top
+            tableView.backgroundColor = .CloudBlue // bottom
+        } else if userTypeString == "Admin" {
+            view.backgroundColor = .clear // top
+            tableView.backgroundColor = .clear // bottom
+        }
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

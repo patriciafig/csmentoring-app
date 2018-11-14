@@ -85,10 +85,9 @@ class LoginViewController: UIViewController {
                             
                             let user = responseJson["user"] as! NSDictionary
                             
-                            //save username and userType  into UserDefaults
+                            //save username and userType into UserDefaults
                             UserDefaults.standard.set(user.value(forKey: "username") as! String, forKey: "userFullName")
                             UserDefaults.standard.set(user.value(forKey: "userType") as! String, forKey: "userType")
-                            
                             UserDefaults.standard.set(responseJson["id"] as! String, forKey: "userId")
                             
                             self.openProfile()

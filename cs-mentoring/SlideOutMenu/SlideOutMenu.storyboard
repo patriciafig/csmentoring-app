@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wlV-sD-syd">
-                                <rect key="frame" x="0.0" y="140" width="375" height="427"/>
+                                <rect key="frame" x="0.0" y="140" width="375" height="527"/>
                                 <color key="backgroundColor" red="0.35294117650000001" green="0.88235294119999996" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="menuCell" rowHeight="87" id="J2F-mK-q1l" customClass="SlideOutMenuTableViewCell" customModule="cs_mentoring" customModuleProvider="target">
@@ -67,13 +67,6 @@
                                     <outlet property="delegate" destination="Ohs-ci-8Yv" id="FvY-on-lKg"/>
                                 </connections>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kqv-Es-N06">
-                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
-                                <color key="backgroundColor" red="0.35294117650000001" green="0.88235294119999996" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="YM1-TX-ppJ"/>
-                                </constraints>
-                            </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ei2-3Y-MMO">
                                 <rect key="frame" x="0.0" y="36" width="375" height="104"/>
                                 <constraints>
@@ -87,13 +80,10 @@
                         <color key="backgroundColor" red="0.94509803920000002" green="0.97647058819999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wlV-sD-syd" firstAttribute="top" secondItem="ei2-3Y-MMO" secondAttribute="bottom" id="AHM-dg-7h4"/>
-                            <constraint firstItem="kqv-Es-N06" firstAttribute="top" secondItem="wlV-sD-syd" secondAttribute="bottom" id="Gnm-7R-Zb9"/>
-                            <constraint firstAttribute="bottom" secondItem="kqv-Es-N06" secondAttribute="bottom" id="J5U-vv-UsN"/>
                             <constraint firstItem="55i-CV-WsB" firstAttribute="trailing" secondItem="wlV-sD-syd" secondAttribute="trailing" id="LjC-q4-ncu"/>
                             <constraint firstItem="ei2-3Y-MMO" firstAttribute="leading" secondItem="55i-CV-WsB" secondAttribute="leading" id="Pb1-z7-XWl"/>
-                            <constraint firstItem="kqv-Es-N06" firstAttribute="leading" secondItem="55i-CV-WsB" secondAttribute="leading" id="QIr-Gl-Tz7"/>
                             <constraint firstItem="ei2-3Y-MMO" firstAttribute="top" secondItem="55i-CV-WsB" secondAttribute="top" constant="16" id="Zru-7W-GeH"/>
-                            <constraint firstItem="55i-CV-WsB" firstAttribute="trailing" secondItem="kqv-Es-N06" secondAttribute="trailing" id="aEx-4U-y7n"/>
+                            <constraint firstAttribute="bottom" secondItem="wlV-sD-syd" secondAttribute="bottom" id="b0s-1V-yWo"/>
                             <constraint firstItem="wlV-sD-syd" firstAttribute="leading" secondItem="55i-CV-WsB" secondAttribute="leading" id="heG-7K-c5Z"/>
                             <constraint firstItem="ei2-3Y-MMO" firstAttribute="trailing" secondItem="55i-CV-WsB" secondAttribute="trailing" id="znT-q3-rYf"/>
                         </constraints>

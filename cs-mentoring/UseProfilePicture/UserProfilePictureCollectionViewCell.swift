@@ -11,5 +11,12 @@ import UIKit
 class UserProfilePictureCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var profilePic: UIImageView!
+    @IBOutlet var userNameLabel: UILabel!
 }
- 
+
+func prepare (for segue: UIStoryboardSegue, sender: Any?){
+    if (segue.identifier == ""){
+        
+    }
+    
+}
