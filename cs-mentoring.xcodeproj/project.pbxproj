@@ -111,6 +111,13 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		4D0B0659219BE82A00555386 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
 		4D417DDB208D5B4E00B4E3FA = {
 			isa = PBXGroup;
 			children = (
@@ -132,8 +139,8 @@
 		4D417DE6208D5B4E00B4E3FA /* cs-mentoring */ = {
 			isa = PBXGroup;
 			children = (
+				4D0B0659219BE82A00555386 /* Messages */,
 				4D4BE5652161D10900431AB8 /* News and Posts */,
-				4D62ED4B21700D1100B6E9A6 /* Schedule Meeting */,
 				4DE75D0D21461B440016DD35 /* SlideOutMenu */,
 				4D78A3ED2143911C007DD8A3 /* UseProfilePicture */,
 				4D78A3EA21408797007DD8A3 /* Style */,
@@ -169,13 +176,6 @@
 				4DFF850F2188C486000AA427 /* NewsFeed.swift */,
 			);
 			path = "News and Posts";
-			sourceTree = "<group>";
-		};
-		4D62ED4B21700D1100B6E9A6 /* Schedule Meeting */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Schedule Meeting";
 			sourceTree = "<group>";
 		};
 		4D78A3EA21408797007DD8A3 /* Style */ = {
