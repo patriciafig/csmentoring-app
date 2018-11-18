@@ -16,6 +16,24 @@ protocol HomeScreenDelegate {
     var drawerDelegate: DrawerDelegate! { get set }
 }
 
+//extension for user selection
+extension HomeScreenViewController : UserSelectionDelegate{
+    func didSelectUsers(user: UsersModel) {
+        print("select")
+        //self.performSegue(withIdentifier: "usersProfileSegue", sender: user)
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeScreenViewController") as! HomeScreenViewController
+        vc.currentUserType = user.userType
+        vc.currentUserId = user.id
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+enum UserType {
+    case student
+    case mentor
+    case admin
+}
 
 class HomeScreenViewController: UIViewController, DrawerDelegate {
     
@@ -23,21 +41,36 @@ class HomeScreenViewController: UIViewController, DrawerDelegate {
     var interestsDelegate : InterestDelegate?
     var usersDelegate : UserProfilePictureDelegate?
     var drawerController : HomeScreenNavigationController?
+    var nameHeaderDelegate: NameHeaderDelegate?
+    
+    var currentUserType: UserType?
+    var currentUserId: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         drawerController?.drawerDelegate = self
         
-        let userType =  UserDefaults.standard.string(forKey: "userType")!
-        let userId = UserDefaults.standard.string(forKey: "userId")!
-        print("userId", userId)
-        if(userType == "Student"){
-            getStudentById(id : userId)
-        }else{
-            getMentorById(id : userId)
+        if let currentUserType = currentUserType, let currentUserId = currentUserId {
+            switch currentUserType {
+            case .student:
+                getStudentById(id: currentUserId)
+            case .mentor:
+                getMentorById(id: currentUserId)
+            case .admin:
+                break // TODO
+            }
+        } else {
+            let userType =  UserDefaults.standard.string(forKey: "userType")!
+            let userId = UserDefaults.standard.string(forKey: "userId")!
+            print("userId", userId)
+            if(userType == "Student"){
+                getStudentById(id : userId)
+            }else{
+                getMentorById(id : userId)
+            }
         }
     }
-    
     
     func getStudentById(id : String){
         let headersInfo = [
@@ -55,6 +88,10 @@ class HomeScreenViewController: UIViewController, DrawerDelegate {
                     if let value = response.result.value{
                         let json = JSON(value)
                         
+                        if self.currentUserId != nil && self.currentUserType != nil {
+                            self.nameHeaderDelegate?.didGetNameHeader(updatedUserType: .student, updatedUserName: json["name"].stringValue, connectedStatus: .notConnected)
+                        }
+
                         //for bio section
                         self.bioDelegate?.didGetBio(bio: json["about"].stringValue)
                         
@@ -69,10 +106,10 @@ class HomeScreenViewController: UIViewController, DrawerDelegate {
                         
                         //for mentors section
                         let mentorsJsonArray = json["mentors"]
-                        var mentors = [String]()
+                        var mentors = [UsersModel]()
                         if(mentorsJsonArray.count > 0){
                             for i in 0...mentorsJsonArray.count-1{
-                                mentors.append(mentorsJsonArray[i].stringValue)
+                                mentors.append(UsersModel(userType: .mentor, email: mentorsJsonArray[i]["email"].stringValue, username: mentorsJsonArray[i]["username"].stringValue, id: mentorsJsonArray[i]["_id"].stringValue, contact: mentorsJsonArray[i]["contact"].stringValue, name: mentorsJsonArray[i]["name"].stringValue))
                             }
                         }
                         
@@ -108,6 +145,10 @@ class HomeScreenViewController: UIViewController, DrawerDelegate {
                     if let value = response.result.value{
                         let json = JSON(value)
                         
+                        if self.currentUserId != nil && self.currentUserType != nil {
+                            self.nameHeaderDelegate?.didGetNameHeader(updatedUserType: .mentor, updatedUserName: json["name"].stringValue, connectedStatus: .notConnected)
+                        }
+                        
                         //for bio section
                         self.bioDelegate?.didGetBio(bio: json["about"].stringValue)
                         
@@ -122,14 +163,16 @@ class HomeScreenViewController: UIViewController, DrawerDelegate {
                         
                         //for students section
                         let studentsJsonArray = json["students"]
-                        var students = [String]()
+                        var students = [UsersModel]()
                         if(studentsJsonArray.count > 0){
                             for i in 0...studentsJsonArray.count-1{
-                                students.append(studentsJsonArray[i].stringValue)
+                                students.append(UsersModel(userType: .student, email: studentsJsonArray[i]["email"].stringValue, username: studentsJsonArray[i]["username"].stringValue, id: studentsJsonArray[i]["_id"].stringValue, contact: studentsJsonArray[i]["contact"].stringValue, name: studentsJsonArray[i]["name"].stringValue))
                             }
                         }
                         
                         self.usersDelegate?.didGetUsers(users: students)
+                        
+                        //self.usersDelegate?.didGetUsers(users: students)
                         self.interestsDelegate?.didGetInterests(interests: interests)
                         print(json)
                     }
@@ -146,10 +189,54 @@ class HomeScreenViewController: UIViewController, DrawerDelegate {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationItem.title = "\(UserDefaults.standard.string(forKey: "userType")!) Profile"
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
+        if let currentUserType = currentUserType, currentUserId != nil {
+            switch currentUserType {
+            case .student:
+                navigationItem.title = "Student Profile"
+            case .mentor:
+                navigationItem.title = "Mentor Profile"
+            case .admin:
+                navigationItem.title = "Admin Profile"
+            }
+        } else {
+            let userTypeString = UserDefaults.standard.string(forKey: "userType") ?? "Student"
+            let userName = UserDefaults.standard.string(forKey: "userFullName") ?? "No name set!"
+            
+            let userType: UserType = {
+                if userTypeString == "Student" {
+                    navigationItem.title = "Student Profile"
+                    return .student
+                } else if userTypeString == "Mentor" {
+                    navigationItem.title = "Mentor Profile"
+                    return .mentor
+                } else {
+                    navigationItem.title = "Admin Profile"
+                    return .admin
+                }
+            }()
+            
+            nameHeaderDelegate?.didGetNameHeader(updatedUserType: userType, updatedUserName: userName, connectedStatus: .me)
+        }
+        
+        var menu: MMDrawerController?
+        var currentParent: UIViewController? = parent
+        while menu == nil && currentParent != nil {
+            menu = currentParent as? MMDrawerController
+            currentParent = currentParent?.parent
+        }
+        
+        if currentUserType != nil && currentUserId != nil {
+            navigationItem.leftBarButtonItem = nil
+            menu?.openDrawerGestureModeMask = .custom
+            menu?.closeDrawerGestureModeMask = .custom
+        } else {
+            menu?.openDrawerGestureModeMask = .panningCenterView
+            menu?.closeDrawerGestureModeMask = .panningCenterView
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -157,9 +244,9 @@ class HomeScreenViewController: UIViewController, DrawerDelegate {
         if let newsAndPostsFeedViewController = segue.destination as? NewsAndPostsFeedViewController {
             newsAndPostsFeedViewController.drawerController = drawerController
             newsAndPostsFeedViewController.drawerDelegate = self
+        } else if let userProfilePictureViewController = segue.destination as? UserProfilePictureViewController {
+            userProfilePictureViewController.userSelectionDelegate = self
         }
-        
-    
     }
     
     @IBAction func hamburgerButtonTapped(_ sender: Any) {

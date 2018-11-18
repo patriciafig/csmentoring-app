@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gIp-Ie-RPU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gIp-Ie-RPU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Karla-Bold.ttf">
+            <string>Karla-Bold</string>
+        </array>
         <array key="SpaceMono-Bold.ttf">
             <string>SpaceMono-Bold</string>
         </array>
@@ -35,6 +38,7 @@
                                             <constraint firstAttribute="height" constant="40" id="HZg-gB-lQx"/>
                                             <constraint firstAttribute="width" constant="40" id="NGr-sx-cGF"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="Karla-Bold" family="Karla" pointSize="13"/>
                                         <state key="normal" image="editIcon"/>
                                         <connections>
                                             <action selector="editButtonTapped:" destination="gIp-Ie-RPU" eventType="touchUpInside" id="aHy-KI-wwM"/>
@@ -96,6 +100,8 @@
                     <size key="freeformSize" width="375" height="104"/>
                     <connections>
                         <outlet property="editButton" destination="Pal-J4-RU3" id="s8s-sa-obc"/>
+                        <outlet property="editButtonWidth" destination="NGr-sx-cGF" id="fZO-ES-V3i"/>
+                        <outlet property="profileIconWidth" destination="Ari-fS-IBL" id="l02-Cv-1Xq"/>
                         <outlet property="userName" destination="8Of-fL-7Q1" id="r97-EC-XnH"/>
                         <outlet property="userType" destination="oK6-WJ-jTW" id="OHh-eU-Kgo"/>
                     </connections>

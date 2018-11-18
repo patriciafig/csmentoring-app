@@ -9,10 +9,6 @@ target 'cs-mentoring' do
 
 pod 'lottie-ios'
 pod 'MMDrawerController', '~> 0.5.7'
-pod 'Firebase/Core'
-pod 'Firebase/Storage'
-pod 'Firebase/Auth'
-pod 'Firebase/Database'
 pod 'JSQMessagesViewController'
 pod 'Alamofire', '~> 4.7.2'
 pod 'SwiftyJSON', '~> 4.0'

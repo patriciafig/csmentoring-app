@@ -79,7 +79,7 @@ class InterestsViewController: UIViewController, UICollectionViewDelegateFlowLay
         return 104
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         guard let homeController = self.parent else{
             return
         }

@@ -9,7 +9,13 @@
 /* Begin PBXBuildFile section */
 		0AAE8AFF208FA68C007FE373 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AAE8AFE208FA68C007FE373 /* SignUpViewController.swift */; };
 		0AD47C4A20904C02000F3319 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AD47C4920904C02000F3319 /* LoginViewController.swift */; };
-		4D3A4EBB2191CA5C0048B360 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D3A4EBA2191CA5C0048B360 /* GoogleService-Info.plist */; };
+		4D0DD89421A0CCCC004D7638 /* UsersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0DD89321A0CCCC004D7638 /* UsersModel.swift */; };
+		4D0DD89821A0D418004D7638 /* ConversationsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D0DD89721A0D418004D7638 /* ConversationsStoryboard.storyboard */; };
+		4D0DD89E21A0D550004D7638 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0DD89D21A0D550004D7638 /* ConversationsViewController.swift */; };
+		4D0DD8AF21A0D8B8004D7638 /* FirstPersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0DD8AD21A0D8B8004D7638 /* FirstPersonTableViewCell.swift */; };
+		4D0DD8BB21A0DA19004D7638 /* SecondPersonTableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0DD8B921A0DA19004D7638 /* SecondPersonTableViewCell2.swift */; };
+		4D0DD8BD21A0DD58004D7638 /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0DD8B521A0D8F4004D7638 /* DateTableViewCell.swift */; };
+		4D0DD8BF21A0DE02004D7638 /* MentorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D0DD8BE21A0DE02004D7638 /* MentorTableViewCell.swift */; };
 		4D410571212D112400632D8F /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D410570212D112400632D8F /* HomeScreenViewController.swift */; };
 		4D410573212D15CC00632D8F /* NameHeader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D410572212D15CC00632D8F /* NameHeader.storyboard */; };
 		4D410575212D197F00632D8F /* NameHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D410574212D197F00632D8F /* NameHeaderViewController.swift */; };
@@ -50,7 +56,13 @@
 		0AAE8AFE208FA68C007FE373 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		0AD47C4920904C02000F3319 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1E7F378B23B921710D15FE1D /* Pods-cs-mentoring.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-cs-mentoring.release.xcconfig"; path = "Pods/Target Support Files/Pods-cs-mentoring/Pods-cs-mentoring.release.xcconfig"; sourceTree = "<group>"; };
-		4D3A4EBA2191CA5C0048B360 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4D0DD89321A0CCCC004D7638 /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
+		4D0DD89721A0D418004D7638 /* ConversationsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ConversationsStoryboard.storyboard; sourceTree = "<group>"; };
+		4D0DD89D21A0D550004D7638 /* ConversationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
+		4D0DD8AD21A0D8B8004D7638 /* FirstPersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPersonTableViewCell.swift; sourceTree = "<group>"; };
+		4D0DD8B521A0D8F4004D7638 /* DateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTableViewCell.swift; sourceTree = "<group>"; };
+		4D0DD8B921A0DA19004D7638 /* SecondPersonTableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPersonTableViewCell2.swift; sourceTree = "<group>"; };
+		4D0DD8BE21A0DE02004D7638 /* MentorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MentorTableViewCell.swift; sourceTree = "<group>"; };
 		4D410570212D112400632D8F /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		4D410572212D15CC00632D8F /* NameHeader.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NameHeader.storyboard; sourceTree = "<group>"; };
 		4D410574212D197F00632D8F /* NameHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameHeaderViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +126,12 @@
 		4D0B0659219BE82A00555386 /* Messages */ = {
 			isa = PBXGroup;
 			children = (
+				4D0DD89721A0D418004D7638 /* ConversationsStoryboard.storyboard */,
+				4D0DD89D21A0D550004D7638 /* ConversationsViewController.swift */,
+				4D0DD8B921A0DA19004D7638 /* SecondPersonTableViewCell2.swift */,
+				4D0DD8AD21A0D8B8004D7638 /* FirstPersonTableViewCell.swift */,
+				4D0DD8B521A0D8F4004D7638 /* DateTableViewCell.swift */,
+				4D0DD8BE21A0DE02004D7638 /* MentorTableViewCell.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -154,7 +172,6 @@
 				4D417DF1208D5B4E00B4E3FA /* Assets.xcassets */,
 				4D417DF3208D5B4E00B4E3FA /* LaunchScreen.storyboard */,
 				4D417DF6208D5B4E00B4E3FA /* Info.plist */,
-				4D3A4EBA2191CA5C0048B360 /* GoogleService-Info.plist */,
 				4D417DEE208D5B4E00B4E3FA /* cs_mentoring.xcdatamodeld */,
 				0AD47C4920904C02000F3319 /* LoginViewController.swift */,
 				4D410570212D112400632D8F /* HomeScreenViewController.swift */,
@@ -192,6 +209,7 @@
 				4D78A3F62143AA07007DD8A3 /* UserProfilePictureCollectionViewCell.swift */,
 				4D78A3F22143987B007DD8A3 /* UserProfilePictureViewController.swift */,
 				4D78A3EE21439203007DD8A3 /* UserProfilePictureStoryboard.storyboard */,
+				4D0DD89321A0CCCC004D7638 /* UsersModel.swift */,
 			);
 			path = UseProfilePicture;
 			sourceTree = "<group>";
@@ -316,6 +334,7 @@
 			files = (
 				4DEF73D7213A31E700A71184 /* SpaceMono-Regular.ttf in Resources */,
 				4DEF73D8213A31E700A71184 /* Karla-Bold.ttf in Resources */,
+				4D0DD89821A0D418004D7638 /* ConversationsStoryboard.storyboard in Resources */,
 				4D4BE5692162824000431AB8 /* NewsandPostsFeed.storyboard in Resources */,
 				4D417DF5208D5B4E00B4E3FA /* LaunchScreen.storyboard in Resources */,
 				4DEF73D9213A31E700A71184 /* SpaceMono-Bold.ttf in Resources */,
@@ -327,7 +346,6 @@
 				4D78A3EF21439203007DD8A3 /* UserProfilePictureStoryboard.storyboard in Resources */,
 				4D410573212D15CC00632D8F /* NameHeader.storyboard in Resources */,
 				4D417DED208D5B4E00B4E3FA /* Main.storyboard in Resources */,
-				4D3A4EBB2191CA5C0048B360 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,28 +378,20 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-cs-mentoring/Pods-cs-mentoring-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/MMDrawerController/MMDrawerController.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMDrawerController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -395,9 +405,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D0DD8BF21A0DE02004D7638 /* MentorTableViewCell.swift in Sources */,
 				4DE75D1121463F1C0016DD35 /* SlideOutMenuViewController.swift in Sources */,
 				4D417DF0208D5B4E00B4E3FA /* cs_mentoring.xcdatamodeld in Sources */,
 				4DD0C8702159710800F7D5F9 /* HomeScreenNavigationController.swift in Sources */,
+				4D0DD8BD21A0DD58004D7638 /* DateTableViewCell.swift in Sources */,
 				4D78A3F32143987B007DD8A3 /* UserProfilePictureViewController.swift in Sources */,
 				4DFF85102188C486000AA427 /* NewsFeed.swift in Sources */,
 				4D61D797213F21C2001438DA /* Extensions.swift in Sources */,
@@ -406,11 +418,15 @@
 				4D5BC0902173EBAA00F5F7BB /* NewsViewController.swift in Sources */,
 				4D410571212D112400632D8F /* HomeScreenViewController.swift in Sources */,
 				4DFF850E2187AE0C000AA427 /* APIendpoints.swift in Sources */,
+				4D0DD8BB21A0DA19004D7638 /* SecondPersonTableViewCell2.swift in Sources */,
 				0AAE8AFF208FA68C007FE373 /* SignUpViewController.swift in Sources */,
 				4D5341382169A9A600F5276E /* FirstViewController.swift in Sources */,
 				4DD0C86E215969DC00F7D5F9 /* SlideOutMenuTableViewCell.swift in Sources */,
+				4D0DD89421A0CCCC004D7638 /* UsersModel.swift in Sources */,
 				0AD47C4A20904C02000F3319 /* LoginViewController.swift in Sources */,
+				4D0DD89E21A0D550004D7638 /* ConversationsViewController.swift in Sources */,
 				4D61D78F213E30CE001438DA /* InterestsCollectionViewCell.swift in Sources */,
+				4D0DD8AF21A0D8B8004D7638 /* FirstPersonTableViewCell.swift in Sources */,
 				4D410575212D197F00632D8F /* NameHeaderViewController.swift in Sources */,
 				4D417DE8208D5B4E00B4E3FA /* AppDelegate.swift in Sources */,
 				4D4BE5672162810300431AB8 /* PostsPageViewController.swift in Sources */,

@@ -32,6 +32,7 @@ class SlideOutMenuViewController: UIViewController,UITableViewDataSource,UITable
     let cellId = "menuCell"
     
     weak var drawerDelegate: DrawerDelegate!
+    var nameHeaderDelegate: NameHeaderDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,17 +45,33 @@ class SlideOutMenuViewController: UIViewController,UITableViewDataSource,UITable
         }
         
         let userTypeString = UserDefaults.standard.string(forKey: "userType")
-        
         if userTypeString == "Student" {
             view.backgroundColor = .CloudBlue // top
             tableView.backgroundColor = .BrightBlue // bottom
         } else if userTypeString == "Mentor" {
             view.backgroundColor = .RoyalPurple // top
             tableView.backgroundColor = .CloudBlue // bottom
-        } else if userTypeString == "Admin" {
+        } else {
             view.backgroundColor = .clear // top
             tableView.backgroundColor = .clear // bottom
         }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let userTypeString = UserDefaults.standard.string(forKey: "userType")
+        let userType: UserType
+        if userTypeString == "Student" {
+            userType = .student
+        } else if userTypeString == "Mentor" {
+            userType = .mentor
+        } else {
+            userType = .admin
+        }
+        
+        let userName = UserDefaults.standard.string(forKey: "userFullName") ?? "No name set!"
+        nameHeaderDelegate?.didGetNameHeader(updatedUserType: userType, updatedUserName: userName, connectedStatus: .me)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
