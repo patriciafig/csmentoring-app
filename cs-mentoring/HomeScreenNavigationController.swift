@@ -37,7 +37,6 @@ class HomeScreenNavigationController: MMDrawerController, DrawerDelegate {
         
         // adjust drawer width
         centerContainer?.setMaximumLeftDrawerWidth(220, animated: true, completion: nil)
-        centerContainer?.shouldStretchDrawer = false
         
     }
     

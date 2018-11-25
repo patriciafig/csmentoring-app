@@ -5,11 +5,11 @@
 //  Created by Patricia on 9/7/18.
 //  Copyright © 2018 Patricia Figueroa. All rights reserved.
 //
-
 import UIKit
 
 protocol UserProfilePictureDelegate {
     func didGetUsers(users : [UsersModel])
+    
 }
 
 protocol UserSelectionDelegate {
@@ -21,7 +21,6 @@ class UserProfilePictureViewController: UIViewController, UICollectionViewDelega
     @IBOutlet private var headerLabel: UILabel!
     private var users = [UsersModel]()
     var userSelectionDelegate : UserSelectionDelegate?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,21 +43,20 @@ class UserProfilePictureViewController: UIViewController, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserProfilePictureCollectionViewCell", for: indexPath) as! UserProfilePictureCollectionViewCell
         
-        // cell.profilePic.image = userProfilePicture[indexPath.row]        
         cell.userNameLabel.text  = users[indexPath.item].name
+        
+        
+        //cell.profilePic.image = userProfilePicture[indexPath.row]
         
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let userId = UserDefaults.standard.string(forKey: "userId") ?? ""
-        
-        if userId == users[indexPath.item].id {
-            navigationController?.popViewController(animated: true)
-        } else {
-            userSelectionDelegate?.didSelectUsers(user: users[indexPath.item])
-        }
+        userSelectionDelegate?.didSelectUsers(user: users[indexPath.item])
     }
+    
+    
+    
     
     override func viewWillAppear(_ animated: Bool) {
         guard let homeController = self.parent else{
@@ -69,20 +67,22 @@ class UserProfilePictureViewController: UIViewController, UICollectionViewDelega
             // do something
             let vc = homeController as! HomeScreenViewController
             vc.usersDelegate = self
+        }
+        if(homeController.isKind(of: UserProfileViewController.self)){
+            let vc = homeController as! UserProfileViewController
+            vc.usersDelegate = self
             
         }
+        
     }
 }
 
 extension UserProfilePictureViewController : UserProfilePictureDelegate {
+    
+    
     func didGetUsers(users: [UsersModel]) {
+        
         self.users = users
         collectionView.reloadData()
-        
-        headerLabel.text = users.first { $0.userType == .student } != nil ? "STUDENTS" : "MENTORS"
     }
-    
-    
-    
-    
 }

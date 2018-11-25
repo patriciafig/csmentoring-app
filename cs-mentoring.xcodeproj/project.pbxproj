@@ -35,6 +35,13 @@
 		4D78A3EF21439203007DD8A3 /* UserProfilePictureStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D78A3EE21439203007DD8A3 /* UserProfilePictureStoryboard.storyboard */; };
 		4D78A3F32143987B007DD8A3 /* UserProfilePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78A3F22143987B007DD8A3 /* UserProfilePictureViewController.swift */; };
 		4D78A3F72143AA07007DD8A3 /* UserProfilePictureCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D78A3F62143AA07007DD8A3 /* UserProfilePictureCollectionViewCell.swift */; };
+		4DB508C621A8C655002F3B46 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB508C521A8C655002F3B46 /* UserProfileViewController.swift */; };
+		4DB508C821A8C68B002F3B46 /* ProfileDetailsHeaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB508C721A8C68B002F3B46 /* ProfileDetailsHeaderViewController.swift */; };
+		4DB508CC21A8C703002F3B46 /* ProfileDetailsHeader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB508CB21A8C703002F3B46 /* ProfileDetailsHeader.storyboard */; };
+		4DB508CF21A8C8EF002F3B46 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB508CE21A8C8EF002F3B46 /* ScheduleViewController.swift */; };
+		4DB508D121A8C917002F3B46 /* Schedule.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB508D021A8C917002F3B46 /* Schedule.storyboard */; };
+		4DB508D421A8C998002F3B46 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DB508D321A8C998002F3B46 /* Calendar.storyboard */; };
+		4DB508D621A8C9AA002F3B46 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DB508D521A8C9AA002F3B46 /* CalendarViewController.swift */; };
 		4DD0C86E215969DC00F7D5F9 /* SlideOutMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0C86D215969DC00F7D5F9 /* SlideOutMenuTableViewCell.swift */; };
 		4DD0C8702159710800F7D5F9 /* HomeScreenNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD0C86F2159710800F7D5F9 /* HomeScreenNavigationController.swift */; };
 		4DE75D0F21461B6B0016DD35 /* SlideOutMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DE75D0E21461B6B0016DD35 /* SlideOutMenu.storyboard */; };
@@ -84,6 +91,13 @@
 		4D78A3EE21439203007DD8A3 /* UserProfilePictureStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserProfilePictureStoryboard.storyboard; sourceTree = "<group>"; };
 		4D78A3F22143987B007DD8A3 /* UserProfilePictureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilePictureViewController.swift; sourceTree = "<group>"; };
 		4D78A3F62143AA07007DD8A3 /* UserProfilePictureCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfilePictureCollectionViewCell.swift; sourceTree = "<group>"; };
+		4DB508C521A8C655002F3B46 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		4DB508C721A8C68B002F3B46 /* ProfileDetailsHeaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailsHeaderViewController.swift; sourceTree = "<group>"; };
+		4DB508CB21A8C703002F3B46 /* ProfileDetailsHeader.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileDetailsHeader.storyboard; sourceTree = "<group>"; };
+		4DB508CE21A8C8EF002F3B46 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
+		4DB508D021A8C917002F3B46 /* Schedule.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Schedule.storyboard; sourceTree = "<group>"; };
+		4DB508D321A8C998002F3B46 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		4DB508D521A8C9AA002F3B46 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		4DD0C86D215969DC00F7D5F9 /* SlideOutMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideOutMenuTableViewCell.swift; sourceTree = "<group>"; };
 		4DD0C86F2159710800F7D5F9 /* HomeScreenNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenNavigationController.swift; sourceTree = "<group>"; };
 		4DE75D0E21461B6B0016DD35 /* SlideOutMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SlideOutMenu.storyboard; sourceTree = "<group>"; };
@@ -123,7 +137,7 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		4D0B0659219BE82A00555386 /* Messages */ = {
+		4D0B0659219BE82A00555386 /* Conversations */ = {
 			isa = PBXGroup;
 			children = (
 				4D0DD89721A0D418004D7638 /* ConversationsStoryboard.storyboard */,
@@ -133,7 +147,7 @@
 				4D0DD8B521A0D8F4004D7638 /* DateTableViewCell.swift */,
 				4D0DD8BE21A0DE02004D7638 /* MentorTableViewCell.swift */,
 			);
-			path = Messages;
+			path = Conversations;
 			sourceTree = "<group>";
 		};
 		4D417DDB208D5B4E00B4E3FA = {
@@ -157,7 +171,11 @@
 		4D417DE6208D5B4E00B4E3FA /* cs-mentoring */ = {
 			isa = PBXGroup;
 			children = (
-				4D0B0659219BE82A00555386 /* Messages */,
+				4DB508D221A8C978002F3B46 /* Calendar */,
+				4DB508CD21A8C8C5002F3B46 /* Schedule */,
+				4DB508C421A8C613002F3B46 /* UserProfile */,
+				4DB508C221A5C425002F3B46 /* Calendar */,
+				4D0B0659219BE82A00555386 /* Conversations */,
 				4D4BE5652161D10900431AB8 /* News and Posts */,
 				4DE75D0D21461B440016DD35 /* SlideOutMenu */,
 				4D78A3ED2143911C007DD8A3 /* UseProfilePicture */,
@@ -212,6 +230,41 @@
 				4D0DD89321A0CCCC004D7638 /* UsersModel.swift */,
 			);
 			path = UseProfilePicture;
+			sourceTree = "<group>";
+		};
+		4DB508C221A5C425002F3B46 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		4DB508C421A8C613002F3B46 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				4DB508C521A8C655002F3B46 /* UserProfileViewController.swift */,
+				4DB508C721A8C68B002F3B46 /* ProfileDetailsHeaderViewController.swift */,
+				4DB508CB21A8C703002F3B46 /* ProfileDetailsHeader.storyboard */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		4DB508CD21A8C8C5002F3B46 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				4DB508CE21A8C8EF002F3B46 /* ScheduleViewController.swift */,
+				4DB508D021A8C917002F3B46 /* Schedule.storyboard */,
+			);
+			path = Schedule;
+			sourceTree = "<group>";
+		};
+		4DB508D221A8C978002F3B46 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				4DB508D321A8C998002F3B46 /* Calendar.storyboard */,
+				4DB508D521A8C9AA002F3B46 /* CalendarViewController.swift */,
+			);
+			name = Calendar;
 			sourceTree = "<group>";
 		};
 		4DE75D0D21461B440016DD35 /* SlideOutMenu */ = {
@@ -335,11 +388,14 @@
 				4DEF73D7213A31E700A71184 /* SpaceMono-Regular.ttf in Resources */,
 				4DEF73D8213A31E700A71184 /* Karla-Bold.ttf in Resources */,
 				4D0DD89821A0D418004D7638 /* ConversationsStoryboard.storyboard in Resources */,
+				4DB508D421A8C998002F3B46 /* Calendar.storyboard in Resources */,
 				4D4BE5692162824000431AB8 /* NewsandPostsFeed.storyboard in Resources */,
 				4D417DF5208D5B4E00B4E3FA /* LaunchScreen.storyboard in Resources */,
 				4DEF73D9213A31E700A71184 /* SpaceMono-Bold.ttf in Resources */,
 				4D417DF2208D5B4E00B4E3FA /* Assets.xcassets in Resources */,
+				4DB508D121A8C917002F3B46 /* Schedule.storyboard in Resources */,
 				4DE75D0F21461B6B0016DD35 /* SlideOutMenu.storyboard in Resources */,
+				4DB508CC21A8C703002F3B46 /* ProfileDetailsHeader.storyboard in Resources */,
 				4DEF73CE213A2B7900A71184 /* Bio.storyboard in Resources */,
 				4DEF73DC213A32D000A71184 /* Interests.storyboard in Resources */,
 				4DEF73D6213A31E700A71184 /* Karla-Regular.ttf in Resources */,
@@ -378,6 +434,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-cs-mentoring/Pods-cs-mentoring-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FSCalendar/FSCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
 				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/MMDrawerController/MMDrawerController.framework",
@@ -387,6 +444,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMDrawerController.framework",
@@ -411,19 +469,23 @@
 				4DD0C8702159710800F7D5F9 /* HomeScreenNavigationController.swift in Sources */,
 				4D0DD8BD21A0DD58004D7638 /* DateTableViewCell.swift in Sources */,
 				4D78A3F32143987B007DD8A3 /* UserProfilePictureViewController.swift in Sources */,
+				4DB508CF21A8C8EF002F3B46 /* ScheduleViewController.swift in Sources */,
 				4DFF85102188C486000AA427 /* NewsFeed.swift in Sources */,
 				4D61D797213F21C2001438DA /* Extensions.swift in Sources */,
 				4D5341362169A63500F5276E /* NewsAndPostsFeedViewController.swift in Sources */,
 				4DEF73DE213A32DD00A71184 /* InterestsViewController.swift in Sources */,
+				4DB508C621A8C655002F3B46 /* UserProfileViewController.swift in Sources */,
 				4D5BC0902173EBAA00F5F7BB /* NewsViewController.swift in Sources */,
 				4D410571212D112400632D8F /* HomeScreenViewController.swift in Sources */,
 				4DFF850E2187AE0C000AA427 /* APIendpoints.swift in Sources */,
 				4D0DD8BB21A0DA19004D7638 /* SecondPersonTableViewCell2.swift in Sources */,
+				4DB508D621A8C9AA002F3B46 /* CalendarViewController.swift in Sources */,
 				0AAE8AFF208FA68C007FE373 /* SignUpViewController.swift in Sources */,
 				4D5341382169A9A600F5276E /* FirstViewController.swift in Sources */,
 				4DD0C86E215969DC00F7D5F9 /* SlideOutMenuTableViewCell.swift in Sources */,
 				4D0DD89421A0CCCC004D7638 /* UsersModel.swift in Sources */,
 				0AD47C4A20904C02000F3319 /* LoginViewController.swift in Sources */,
+				4DB508C821A8C68B002F3B46 /* ProfileDetailsHeaderViewController.swift in Sources */,
 				4D0DD89E21A0D550004D7638 /* ConversationsViewController.swift in Sources */,
 				4D61D78F213E30CE001438DA /* InterestsCollectionViewCell.swift in Sources */,
 				4D0DD8AF21A0D8B8004D7638 /* FirstPersonTableViewCell.swift in Sources */,

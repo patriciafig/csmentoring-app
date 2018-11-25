@@ -99,9 +99,7 @@
                     </view>
                     <size key="freeformSize" width="375" height="104"/>
                     <connections>
-                        <outlet property="editButton" destination="Pal-J4-RU3" id="s8s-sa-obc"/>
-                        <outlet property="editButtonWidth" destination="NGr-sx-cGF" id="fZO-ES-V3i"/>
-                        <outlet property="profileIconWidth" destination="Ari-fS-IBL" id="l02-Cv-1Xq"/>
+                        <outlet property="editButton" destination="Pal-J4-RU3" id="pdI-5g-Yr1"/>
                         <outlet property="userName" destination="8Of-fL-7Q1" id="r97-EC-XnH"/>
                         <outlet property="userType" destination="oK6-WJ-jTW" id="OHh-eU-Kgo"/>
                     </connections>

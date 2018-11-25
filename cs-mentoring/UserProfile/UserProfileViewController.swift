@@ -1,64 +1,91 @@
 //
-//  HomeScreenViewController.swift
+//  UserProfileViewController.swift
 //  cs-mentoring
 //
-//  Created by Patricia on 8/21/18.
+//  Created by Patricia on 11/15/18.
 //  Copyright © 2018 Patricia Figueroa. All rights reserved.
 //
 
 import UIKit
-import MMDrawerController
 import Alamofire
 import SwiftyJSON
 
-protocol HomeScreenDelegate {
-    var drawerController: HomeScreenNavigationController? { get set }
-    var drawerDelegate: DrawerDelegate! { get set }
+
+protocol UserProfileDelegate {
+    func connectBtnDidTapped()
 }
 
-//extension for user selection
-extension HomeScreenViewController : UserSelectionDelegate{
-    func didSelectUsers(user: UsersModel) {
-        print("select")
-        //  self.performSegue(withIdentifier: "usersProfileSegue", sender: user)
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UserProfileViewController") as! UserProfileViewController
-        vc.user = user
-        self.navigationController?.pushViewController(vc, animated: true)
+extension UserProfileViewController : UserProfileDelegate{
+    func connectBtnDidTapped() {
+        let alert = UIAlertController(title: "Connect with Mentor", message: "How would you like to connect with Rachel?", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Message", style: .default, handler: { action in
+            
+            switch action.style{
+            case .default:
+                let vc = UIStoryboard(name: "ConversationsStoryboard", bundle: nil).instantiateViewController(withIdentifier: "ConversationsViewController") as! ConversationsViewController
+                self.navigationController?.pushViewController(vc, animated: true)
+            case .cancel:
+                print("cancel")
+            case .destructive:
+                print("destructive")
+                
+            }}))
+        alert.addAction(UIAlertAction(title: "Schedule", style: .default, handler: { action in
+            
+            switch action.style{
+            case .default:
+                print("default")
+                let vc = UIStoryboard(name: "Schedule", bundle: nil).instantiateViewController(withIdentifier: "ScheduleViewController") as! ScheduleViewController
+                self.navigationController?.pushViewController(vc, animated: true)
+                
+            case .cancel:
+                print("cancel")
+                
+            case .destructive:
+                print("destructive")
+                
+                
+            }}))
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
         
     }
+    
+    
 }
 
-class HomeScreenViewController: UIViewController, DrawerDelegate {
+class UserProfileViewController: UIViewController {
     
     var bioDelegate : BioDelegate?
     var interestsDelegate : InterestDelegate?
     var usersDelegate : UserProfilePictureDelegate?
-    
-    var drawerController : HomeScreenNavigationController?
-    
-    override func viewDidAppear(_ animated: Bool) {
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-        
-    }
+    var user : UsersModel?
+    var profileHeaderDelegate : ProfileDetailsHeaderDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
-        drawerController?.drawerDelegate = self
-        
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        guard let user = user else {return}
+        let userId = user.id
         let userType =  UserDefaults.standard.string(forKey: "userType")!
-        let userId = UserDefaults.standard.string(forKey: "userId")!
-        print("userId", userId)
+        print(user)
         if(userType == "Student"){
-            getStudentById(id : userId)
-        }else{
             getMentorById(id : userId)
+            profileHeaderDelegate?.didGetDetails(name: user.name, post: "Mentor")
+            
+        }else{
+            getStudentById(id : userId)
+            profileHeaderDelegate?.didGetDetails(name: user.name, post: "Student")
+            
         }
         
         
         
         
     }
-    
-    
     
     func getStudentById(id : String){
         let headersInfo = [
@@ -76,6 +103,7 @@ class HomeScreenViewController: UIViewController, DrawerDelegate {
                     if let value = response.result.value{
                         let json = JSON(value)
                         
+                        
                         //for bio section
                         self.bioDelegate?.didGetBio(bio: json["about"].stringValue)
                         
@@ -89,6 +117,7 @@ class HomeScreenViewController: UIViewController, DrawerDelegate {
                         }
                         
                         //for mentors section
+                    
                         let mentorsJsonArray = json["mentors"]
                         var mentors = [UsersModel]()
                         if(mentorsJsonArray.count > 0){
@@ -140,17 +169,16 @@ class HomeScreenViewController: UIViewController, DrawerDelegate {
                                 interests.append(interestsJsonArray[i].stringValue)
                             }
                         }
-                        
+            
                         //for students section
                         let studentsJsonArray = json["students"]
-                        var students = [String]()
+                        var students = [UsersModel]()
                         if(studentsJsonArray.count > 0){
                             for i in 0...studentsJsonArray.count-1{
-                                students.append(studentsJsonArray[i].stringValue)
+                                students.append(UsersModel.init(email: studentsJsonArray[i]["email"].stringValue, username: studentsJsonArray[i]["username"].stringValue, id: studentsJsonArray[i]["_id"].stringValue, contact: studentsJsonArray[i]["contact"].stringValue, name: studentsJsonArray[i]["name"].stringValue))
                             }
                         }
-                        
-                        //                        self.usersDelegate?.didGetUsers(users: students)
+                        self.usersDelegate?.didGetUsers(users: students)
                         self.interestsDelegate?.didGetInterests(interests: interests)
                         print(json)
                     }
@@ -167,42 +195,18 @@ class HomeScreenViewController: UIViewController, DrawerDelegate {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationItem.title = "\(UserDefaults.standard.string(forKey: "userType")!) Profile"
-        
-        
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.tintColor = UIColor.white
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        if let newsAndPostsFeedViewController = segue.destination as? NewsAndPostsFeedViewController {
-            newsAndPostsFeedViewController.drawerController = drawerController
-            newsAndPostsFeedViewController.drawerDelegate = self
-        }
-        
-        
-        if let userProfileViewController = segue.destination as? UserProfilePictureViewController{
-            let _  = userProfileViewController.view
-            userProfileViewController.userSelectionDelegate = self
+        if let profileHeaderVc = segue.destination as? ProfileDetailsHeaderViewController{
+            profileHeaderVc.profileDelegate = self
         }
     }
     
-    @IBAction func hamburgerButtonTapped(_ sender: Any) {
-        print("tapped")
-        drawerController?.toggleDrawer()
-    }
     
-    func navigate(to item: SlideOutMenuItems?) {
-        if let item = item {
-            if item.menuLabel == "NEWS 0" {
-                performSegue(withIdentifier: "posts", sender: nil)
-                drawerController?.toggleDrawer()
-            }
-        } else {
-            navigationController?.popViewController(animated: false)
-        }
-    }
+    
 }
+
 

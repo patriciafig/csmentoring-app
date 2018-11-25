@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k1a-VQ-sCu">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SpaceMono-Bold.ttf">
+            <string>SpaceMono-Bold</string>
+        </array>
+        <array key="SpaceMono-Regular.ttf">
+            <string>SpaceMono-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Profile Details Header View Controller-->
+        <scene sceneID="Pg5-2F-doo">
+            <objects>
+                <viewController id="k1a-VQ-sCu" customClass="ProfileDetailsHeaderViewController" customModule="cs_mentoring" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tfb-h3-aaQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9u-wY-Ygm">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s0l-Ml-2XQ">
+                                        <rect key="frame" x="243" y="303.5" width="100" height="40"/>
+                                        <color key="backgroundColor" red="0.24313725489999999" green="0.69803921570000005" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="KMw-an-1Ve"/>
+                                            <constraint firstAttribute="width" constant="100" id="NQT-Zf-cYh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <state key="normal" title="CONNECT"/>
+                                        <connections>
+                                            <action selector="connectBtnTapped:" destination="k1a-VQ-sCu" eventType="touchUpInside" id="AFv-im-9v9"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="COZ-P1-ivk">
+                                        <rect key="frame" x="32" y="303.5" width="203" height="40"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Jake Johnson" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jxZ-Cw-FOM">
+                                                <rect key="frame" x="0.0" y="0.0" width="203" height="22.5"/>
+                                                <fontDescription key="fontDescription" name="SpaceMono-Bold" family="Space Mono" pointSize="15"/>
+                                                <color key="textColor" red="0.14901960780000001" green="0.59999999999999998" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Student" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zif-lk-o8a">
+                                                <rect key="frame" x="0.0" y="22.5" width="203" height="17.5"/>
+                                                <fontDescription key="fontDescription" name="SpaceMono-Regular" family="Space Mono" pointSize="12"/>
+                                                <color key="textColor" red="0.14901960780000001" green="0.59999999999999998" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="8fd-wb-vLF"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="s0l-Ml-2XQ" firstAttribute="leading" secondItem="COZ-P1-ivk" secondAttribute="trailing" constant="8" id="EAc-De-ks6"/>
+                                    <constraint firstItem="s0l-Ml-2XQ" firstAttribute="centerY" secondItem="f9u-wY-Ygm" secondAttribute="centerY" id="Kq6-xi-aop"/>
+                                    <constraint firstItem="COZ-P1-ivk" firstAttribute="centerY" secondItem="f9u-wY-Ygm" secondAttribute="centerY" id="avg-OL-15u"/>
+                                    <constraint firstAttribute="trailing" secondItem="s0l-Ml-2XQ" secondAttribute="trailing" constant="32" id="dEI-LZ-NSQ"/>
+                                    <constraint firstItem="COZ-P1-ivk" firstAttribute="leading" secondItem="f9u-wY-Ygm" secondAttribute="leading" constant="32" id="fWX-JM-LhA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="f9u-wY-Ygm" firstAttribute="leading" secondItem="Tfb-h3-aaQ" secondAttribute="leading" id="6Wt-fL-FSG"/>
+                            <constraint firstItem="Wpu-De-N9a" firstAttribute="bottom" secondItem="f9u-wY-Ygm" secondAttribute="bottom" id="UOw-4F-0vi"/>
+                            <constraint firstItem="Wpu-De-N9a" firstAttribute="trailing" secondItem="f9u-wY-Ygm" secondAttribute="trailing" id="nIS-jp-RJc"/>
+                            <constraint firstItem="f9u-wY-Ygm" firstAttribute="top" secondItem="Wpu-De-N9a" secondAttribute="top" id="pwW-FT-FA4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Wpu-De-N9a"/>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="jxZ-Cw-FOM" id="dLv-pa-K0L"/>
+                        <outlet property="userTypeLabel" destination="zif-lk-o8a" id="JTo-1s-qNJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BOu-Zo-m40" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63" y="25"/>
+        </scene>
+    </scenes>
+</document>

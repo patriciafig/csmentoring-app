@@ -12,5 +12,6 @@ pod 'MMDrawerController', '~> 0.5.7'
 pod 'JSQMessagesViewController'
 pod 'Alamofire', '~> 4.7.2'
 pod 'SwiftyJSON', '~> 4.0'
+pod 'FSCalendar'
 
 end
